@@ -29,7 +29,7 @@ public class MainMovement : MonoBehaviour
     {
         if (_context.performed)
         {
-            m_RB.AddExplosionForce(jumpForce, transform.up, 2f, 2f, ForceMode.Impulse);
+            m_RB.AddForce(transform.up * jumpForce);
         }
     }
 }
