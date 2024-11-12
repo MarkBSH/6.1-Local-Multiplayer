@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrassOutline
+  m_Name: RockOutline
   m_Shader: {fileID: -6465566751694194690, guid: 48ac541bbba66614caf0150e81b4b48b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _OutlineColor: {r: 0.08855865, g: 0.23018861, b: 0.037785664, a: 0}
+    - _OutlineColor: {r: 0.07224633, g: 0.15811615, b: 0.2754717, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8778520226177774374
 MonoBehaviour:
