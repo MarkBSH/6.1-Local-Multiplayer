@@ -59,10 +59,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0b2dbe905bec59f4a8480dd4d897a469, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
+      objectReference: {fileID: 2100000, guid: e2117641cb71be346b00241ce1d88d86, type: 2}
     - target: {fileID: 919132149155446097, guid: 0b2dbe905bec59f4a8480dd4d897a469, type: 3}
       propertyPath: m_Name
-      value: Bush
+      value: P_Bush
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
