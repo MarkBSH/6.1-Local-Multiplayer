@@ -117,11 +117,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6615972393125125912}
   - component: {fileID: 5436288744834039346}
+  - component: {fileID: 3263376619727969794}
   - component: {fileID: 9008222972081420997}
   - component: {fileID: 3528078544637159897}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 6427375468380348724}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -154,7 +155,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2c0927cc0bb33499235398a6e0bea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 4
+  jumpForce: 400
+--- !u!114 &3263376619727969794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427375468380348724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5729e432063163d458a116e32cd6bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenGame: 
 --- !u!114 &9008222972081420997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +199,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5436288744834039346}
         m_TargetAssemblyTypeName: MainMovement, Assembly-CSharp
-        m_MethodName: MoveHorizontal
+        m_MethodName: GetMovement
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -197,7 +212,19 @@ MonoBehaviour:
     m_ActionId: cfed284f-e1f3-4de7-b5f1-1340579f05a5
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/DualShock4GamepadHID/leftStick]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5436288744834039346}
+        m_TargetAssemblyTypeName: MainMovement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 66e56813-16ca-4bb2-b19e-c941f640df94
     m_ActionName: Player/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
   - m_PersistentCalls:
