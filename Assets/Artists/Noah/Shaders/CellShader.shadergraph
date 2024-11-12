@@ -8,9 +8,6 @@
         },
         {
             "m_Id": "6afdc915f6be4d31a7fdbcc89c3d158d"
-        },
-        {
-            "m_Id": "d460e3c3cfc8440db0bce184ea4473bc"
         }
     ],
     "m_Keywords": [],
@@ -1946,9 +1943,6 @@
         },
         {
             "m_Id": "6afdc915f6be4d31a7fdbcc89c3d158d"
-        },
-        {
-            "m_Id": "d460e3c3cfc8440db0bce184ea4473bc"
         }
     ]
 }
@@ -5240,36 +5234,6 @@
         "z": 0.0,
         "w": 0.0
     }
-}
-
-{
-    "m_SGVersion": 3,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
-    "m_ObjectId": "d460e3c3cfc8440db0bce184ea4473bc",
-    "m_Guid": {
-        "m_GuidSerialized": "0a87677a-55ca-40cd-a937-55817d4ba61e"
-    },
-    "m_Name": "FresnelColor",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "FresnelColor",
-    "m_DefaultReferenceName": "_FresnelColor",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
-        "a": 0.0
-    },
-    "isMainColor": false,
-    "m_ColorMode": 0
 }
 
 {
