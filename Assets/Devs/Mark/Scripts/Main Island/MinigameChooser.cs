@@ -6,7 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class MinigameChooser : MonoBehaviour
 {
-    PlayerChooseGame[] games;
+    private static MinigameChooser m_Instance;
+    public static MinigameChooser Instance
+    {
+        get
+        {
+            if (m_Instance == null)
+            {
+                m_Instance = FindObjectOfType<MinigameChooser>();
+                if (m_Instance == null)
+                {
+                    GameObject _obj = new()
+                    {
+                        name = typeof(MinigameChooser).Name
+                    };
+                    m_Instance = _obj.AddComponent<MinigameChooser>();
+                }
+            }
+            return m_Instance;
+        }
+    }
+
+    public PlayerChooseGame[] games;
     string[] chosenGames;
     GameObject countdownText;
     GameObject choosingPanel;
@@ -21,7 +42,7 @@ public class MinigameChooser : MonoBehaviour
         choosingPanel.SetActive(false);
     }
 
-    void Start()
+    public void PlayerSetup()
     {
         games = FindObjectsOfType<PlayerChooseGame>();
         chosenGames = new string[games.Length];

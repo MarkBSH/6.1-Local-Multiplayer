@@ -1423,67 +1423,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &1620694775
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3938347734453434830, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 220bc5be76a94a64db5fdcc01258211a, type: 2}
-    - target: {fileID: 6427375468380348724, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615972393125125912, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
 --- !u!1 &1635126370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,8 +1605,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849478890}
+  - component: {fileID: 1849478892}
   - component: {fileID: 1849478891}
-  - component: {fileID: 1849478889}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1675,66 +1614,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1849478889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849478888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: 4
-  m_AllowJoining: 1
-  m_JoinBehavior: 1
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Join
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: a29c732d-6cbb-4f35-9afb-01ea0dd46810
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: e7fb921f-16fa-4921-82ba-0ac7790b4465
-        m_Path: <Keyboard>/enter
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 1dd4c20a-16c0-4be9-9504-63fe78c7d26f
-        m_Path: <Gamepad>/start
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6427375468380348724, guid: 3d42649d8924cc947b7870e184d16d25, type: 3}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!4 &1849478890
 Transform:
   m_ObjectHideFlags: 0
@@ -1763,6 +1642,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chooseAnimation: {fileID: 1555833477}
+--- !u!114 &1849478892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849478888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cedc81bac7a154db99398521e77673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 4441819148865368702, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+  - {fileID: 7667364290627596313, guid: efc15ade62d64234d9cd6b90ee58d627, type: 3}
+  - {fileID: 3875029500769811814, guid: 5e936d08bbc38ce4d889f4a91963a1a5, type: 3}
+  - {fileID: 8000518281768873781, guid: a3cadf475162d2841af5c116a3b84752, type: 3}
+  spawnLocations:
+  - {x: 3, y: 1, z: 0}
+  - {x: 0, y: 1, z: 2}
+  - {x: -2, y: 1, z: 0}
+  - {x: 0, y: 1, z: 4}
 --- !u!1 &2009337983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,5 +1879,4 @@ SceneRoots:
   - {fileID: 1668669647}
   - {fileID: 12676407}
   - {fileID: 1635126373}
-  - {fileID: 1620694775}
   - {fileID: 6747607150295295490}

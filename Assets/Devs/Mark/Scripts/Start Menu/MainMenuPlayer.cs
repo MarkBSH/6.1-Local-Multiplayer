@@ -9,7 +9,6 @@ public class MainMenuPlayer : MonoBehaviour
     public int playerNum;
     public int SelectedSkin = 0;
     
-    public float movementSpeed = 10;
     Vector2 moveDir;
 
     void Start()
