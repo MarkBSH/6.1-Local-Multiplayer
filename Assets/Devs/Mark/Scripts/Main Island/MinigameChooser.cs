@@ -33,6 +33,7 @@ public class MinigameChooser : MonoBehaviour
     GameObject choosingPanel;
     [SerializeField] Animator chooseAnimation;
     bool canStartCooldown = true;
+    Coroutine co;
 
     void Awake()
     {
@@ -60,14 +61,14 @@ public class MinigameChooser : MonoBehaviour
             {
                 countdownText.SetActive(false);
                 canStartCooldown = true;
-                StopCoroutine(StartCountdown());
+                StopCoroutine(co);
                 break;
             }
             if (i == games.Length - 1)
             {
                 if (canStartCooldown == true)
                 {
-                    StartCoroutine(StartCountdown());
+                    co = StartCoroutine(StartCountdown());
                 }
             }
         }

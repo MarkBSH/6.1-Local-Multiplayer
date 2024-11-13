@@ -119,10 +119,8 @@ public class MainMenu : MonoBehaviour
                 {
                     shownSkin = 0;
                 }
-                Debug.Log(i * 3 + j);
                 cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[shownSkin].mesh;
                 cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[shownSkin].material;
-                Debug.Log("Test4");
             }
             skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[mainMenuPlayer[i].SelectedSkin].mesh;
             skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[mainMenuPlayer[i].SelectedSkin].material;
