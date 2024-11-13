@@ -231,6 +231,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 636de088-31ab-4f84-bab4-b7f24673869d
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2875056229360933588}
+        m_TargetAssemblyTypeName: MainMenuPlayer, Assembly-CSharp
+        m_MethodName: ScrollUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1df85986-1655-4263-b3d6-1ce4edb99cc7
+    m_ActionName: Player/CosmScrollUp[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2875056229360933588}
+        m_TargetAssemblyTypeName: MainMenuPlayer, Assembly-CSharp
+        m_MethodName: ScrollDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 17912345-af84-46d6-972c-b11aa5b93b7d
+    m_ActionName: Player/CosmScrollDown[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

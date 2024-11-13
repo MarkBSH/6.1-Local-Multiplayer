@@ -7,14 +7,14 @@ public class MainMenuPlayer : MonoBehaviour
 {
     public bool isReady = false;
     public int playerNum;
-    public int SelectedSkin;
+    public int SelectedSkin = 0;
     
     public float movementSpeed = 10;
     Vector2 moveDir;
 
     void Start()
     {
-        
+        MainMenu.Instance.UpdateCosmVisuals();
     }
 
     void Update()
@@ -35,6 +35,32 @@ public class MainMenuPlayer : MonoBehaviour
         if (_context.performed)
         {
             isReady = true;
+        }
+    }
+
+    public void ScrollUp(InputAction.CallbackContext _context)
+    {
+        if (_context.performed)
+        {
+            SelectedSkin--; 
+            if (SelectedSkin < 0)
+            {
+                SelectedSkin = MainMenu.Instance.cosmeticsList.Count - 1;
+            }
+            MainMenu.Instance.UpdateCosmVisuals();
+        }
+    }
+
+    public void ScrollDown(InputAction.CallbackContext _context)
+    {
+        if (_context.performed)
+        {
+            SelectedSkin++;
+            if (SelectedSkin > MainMenu.Instance.cosmeticsList.Count - 1)
+            {
+                SelectedSkin = 0;
+            }
+            MainMenu.Instance.UpdateCosmVisuals();
         }
     }
 }
