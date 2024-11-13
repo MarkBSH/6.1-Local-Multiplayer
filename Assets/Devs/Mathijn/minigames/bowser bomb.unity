@@ -182,7 +182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f4700256b34bb354aa67e1034254ebfc, type: 2}
+  - {fileID: 2100000, guid: b2c62ab880078d7469b16e43dec475e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,8 +221,8 @@ Transform:
   m_GameObject: {fileID: 90739630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.91, z: 0}
-  m_LocalScale: {x: 3000, y: 3.3333333, z: 3000}
+  m_LocalPosition: {x: 0, y: -8.6, z: 0}
+  m_LocalScale: {x: 250, y: 3.3333333, z: 250}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 886378945}
   - component: {fileID: 886378944}
   - component: {fileID: 886378943}
+  - component: {fileID: 886378946}
   m_Layer: 0
   m_Name: rond daai ding
   m_TagString: Untagged
@@ -769,6 +770,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886378941}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &886378946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886378941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9e6779e5a98d54e858dd334370af0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draaiding: {fileID: 2140623006}
+  rotationSpeed: 0.75
+  EnableRotation: 1
 --- !u!1 &947755137
 GameObject:
   m_ObjectHideFlags: 0
