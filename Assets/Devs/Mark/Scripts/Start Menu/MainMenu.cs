@@ -50,18 +50,8 @@ public class MainMenu : MonoBehaviour
 
     int totalPlayers = 0;
 
-    [SerializeField] GameObject testObj;
-
-    void Awake()
-    {
-        skinSelector = GameObject.FindGameObjectsWithTag("PlayerSkinSelector");
-        cosmSelector = GameObject.FindGameObjectsWithTag("CosmSkinSelector");
-    }
-    
     void Start()
     {
-        testObj.transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[0].mesh;
-        testObj.transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[0].material;
         for (int i = 0; i < 4; i++)
         {
             readyCanv[i].SetActive(false);
@@ -91,6 +81,7 @@ public class MainMenu : MonoBehaviour
 
                 if (canStartGame == true && i == totalPlayers - 1)
                 {
+                    EquipCosmetics();
                     //start game
                     Debug.Log("start");
                 }
@@ -123,12 +114,21 @@ public class MainMenu : MonoBehaviour
                     shownSkin = 0;
                 }
                 Debug.Log(i * 3 + j);
-                cosmSelector[i * 3 + j].GetComponent<MeshFilter>().mesh = cosmeticsList[shownSkin].mesh;
-                cosmSelector[i * 3 + j].GetComponent<MeshRenderer>().material = cosmeticsList[shownSkin].material;
+                cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[shownSkin].mesh;
+                cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[shownSkin].material;
                 Debug.Log("Test4");
             }
             skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[mainMenuPlayer[i].SelectedSkin].mesh;
             skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[mainMenuPlayer[i].SelectedSkin].material;
+        }
+    }
+
+    void EquipCosmetics()
+    {
+        for (int i = 0; i < mainMenuPlayer.Length; i++)
+        {
+            mainMenuPlayer[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[mainMenuPlayer[i].SelectedSkin].mesh;
+            mainMenuPlayer[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[mainMenuPlayer[i].SelectedSkin].material;
         }
     }
 }
