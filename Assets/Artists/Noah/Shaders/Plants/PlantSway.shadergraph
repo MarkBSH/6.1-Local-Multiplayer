@@ -917,9 +917,9 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -2360.800048828125,
-            "y": 178.4000244140625,
-            "width": 150.400146484375,
-            "height": 33.59996032714844
+            "y": 158.39999389648438,
+            "width": 151.199951171875,
+            "height": 33.600006103515628
         }
     },
     "m_Slots": [
@@ -1616,7 +1616,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.5,
+    "m_Value": 0.009999999776482582,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -1854,10 +1854,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2535.199951171875,
-            "y": -176.79995727539063,
+            "x": -2534.39990234375,
+            "y": -176.8000030517578,
             "width": 134.39990234375,
-            "height": 33.59992980957031
+            "height": 33.600006103515628
         }
     },
     "m_Slots": [
@@ -2600,8 +2600,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 10.0,
-        "y": 20.0,
+        "x": 40.0,
+        "y": 100.0,
         "z": 0.0,
         "w": 0.0
     }
@@ -3047,7 +3047,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.5,
+    "m_Value": 0.029999999329447748,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -6085,8 +6085,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 0.0,
-        "y": 1.0,
+        "x": -0.20000000298023225,
+        "y": 1.2000000476837159,
         "z": 0.0,
         "w": 0.0
     }
@@ -6136,7 +6136,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.009999999776482582,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
