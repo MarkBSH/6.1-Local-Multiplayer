@@ -2893,7 +2893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2133912094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5829,6 +5829,14 @@ PrefabInstance:
     - target: {fileID: 6762860874205594769, guid: b4c73b2bf7883094a9aa310fe10a23cb, type: 3}
       propertyPath: m_Name
       value: Island1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123009526151969805, guid: b4c73b2bf7883094a9aa310fe10a23cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123009526151969805, guid: b4c73b2bf7883094a9aa310fe10a23cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
