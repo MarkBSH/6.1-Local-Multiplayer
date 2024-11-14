@@ -95,11 +95,13 @@ public class MinigameChooser : MonoBehaviour
     {
         countdownText.SetActive(false);
         string[] confirmedGames = chosenGames;
-        int tempChosenPlayer = Random.Range(1, games.Length);
-        string tempChosenAnimation = "Player " + tempChosenPlayer;
+        int tempChosenPlayer = Random.Range(0, games.Length - 1);
+        string tempChosenAnimation = "Player " + (tempChosenPlayer + 1);
         choosingPanel.SetActive(true);
         chooseAnimation.SetTrigger(tempChosenAnimation);
         yield return new WaitForSeconds(5);
+        Debug.Log(tempChosenPlayer);
+        Debug.Log(confirmedGames[tempChosenPlayer]);
         SceneManager.LoadScene(confirmedGames[tempChosenPlayer]);
     }
 }
