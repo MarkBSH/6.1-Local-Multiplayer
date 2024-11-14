@@ -8,7 +8,7 @@ public class MainMenuPlayer : MonoBehaviour
     public bool isReady = false;
     public int playerNum;
     public int SelectedSkin = 0;
-    
+
     Vector2 moveDir;
 
     void Start()
@@ -18,7 +18,7 @@ public class MainMenuPlayer : MonoBehaviour
 
     void Update()
     {
-        MainMenu.Instance.skinSelector[playerNum].transform.forward = new(moveDir.x, 0 , moveDir.y);
+        MainMenu.Instance.skinSelector[playerNum].transform.forward = new(moveDir.x, 0, moveDir.y);
     }
 
     public void GetMovement(InputAction.CallbackContext _context)
@@ -41,7 +41,7 @@ public class MainMenuPlayer : MonoBehaviour
     {
         if (_context.performed)
         {
-            SelectedSkin--; 
+            SelectedSkin--;
             if (SelectedSkin < 0)
             {
                 SelectedSkin = MainMenu.Instance.cosmeticsList.Count - 1;

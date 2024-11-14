@@ -7,6 +7,8 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] GameObject[] players;
     [SerializeField] Vector3[] spawnLocations;
 
+    [SerializeField] bool isMainIsland = false;
+
     void Start()
     {
         for (int i = 0; i < CosmeticsSpawner.Instance.spawningPlayers; i++)
@@ -14,6 +16,11 @@ public class SpawnPlayers : MonoBehaviour
             Instantiate(players[i], spawnLocations[i], Quaternion.identity);
             CosmeticsSpawner.Instance.PlaceCosmetics();
             MinigameChooser.Instance.PlayerSetup();
+        }
+
+        if (isMainIsland)
+        {
+            ScoreManager.Instance.FindAndSetTexts();
         }
     }
 }

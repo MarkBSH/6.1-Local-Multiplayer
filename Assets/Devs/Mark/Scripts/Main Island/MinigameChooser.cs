@@ -61,7 +61,10 @@ public class MinigameChooser : MonoBehaviour
             {
                 countdownText.SetActive(false);
                 canStartCooldown = true;
-                StopCoroutine(co);
+                if (co != null)
+                {
+                    StopCoroutine(co);
+                }
                 break;
             }
             if (i == games.Length - 1)
