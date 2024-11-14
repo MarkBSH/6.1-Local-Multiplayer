@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.7184324
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.2834854
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.12998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_Name
-      value: P_CowboyHat
+      value: P_CowboyHatRun
       objectReference: {fileID: 0}
     - target: {fileID: 4978493342955738392, guid: c02e8475bb62c054f988216ce2e984a5, type: 3}
       propertyPath: m_Materials.Array.size
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 5157436272259403583}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9adf8a6228e95d447b0c32831192d58b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 38818d92c36bd6f4aa3de7de0572b83a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
