@@ -258,7 +258,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6524286773231915184}
         m_TargetAssemblyTypeName: MainMovement, Assembly-CSharp
         m_MethodName: GetMovement
         m_Mode: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/DualShock4GamepadHID/leftStick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6524286773231915184}
         m_TargetAssemblyTypeName: MainMovement, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
