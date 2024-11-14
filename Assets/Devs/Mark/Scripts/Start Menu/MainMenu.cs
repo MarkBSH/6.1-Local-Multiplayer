@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject[] skinSelector;
     public GameObject[] cosmSelector;
-    MainMenuPlayer[] mainMenuPlayer;
+    public MainMenuPlayer[] mainMenuPlayer;
 
     int totalPlayers = 0;
 
@@ -96,7 +96,14 @@ public class MainMenu : MonoBehaviour
 
     public void JoinedGame()
     {
-        mainMenuPlayer = FindObjectsOfType<MainMenuPlayer>();
+        MainMenuPlayer[] mainMenuPlayerTemp = FindObjectsOfType<MainMenuPlayer>();
+        mainMenuPlayer = new MainMenuPlayer[mainMenuPlayerTemp.Length];
+
+        for (int i = 0; i < mainMenuPlayerTemp.Length; i++)
+        {
+            mainMenuPlayer[i] = mainMenuPlayerTemp[mainMenuPlayerTemp.Length - 1 - i];
+        }
+
         mainMenuPlayer[totalPlayers].gameObject.transform.position = new Vector3(0, -2, 0);
         mainMenuPlayer[totalPlayers].playerNum = totalPlayers;
         activeCanv[totalPlayers].SetActive(true);
