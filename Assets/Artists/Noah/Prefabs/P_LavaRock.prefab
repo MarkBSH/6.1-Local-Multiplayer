@@ -59,7 +59,7 @@ PrefabInstance:
     - target: {fileID: -7596007570918905216, guid: 7ee183af3c98ed241a98e7011d5ef89a, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d23301cc72df00459a68186cada82e9, type: 2}
     - target: {fileID: -4430085933624465465, guid: 7ee183af3c98ed241a98e7011d5ef89a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -71,14 +71,14 @@ PrefabInstance:
     - target: {fileID: -4430085933624465465, guid: 7ee183af3c98ed241a98e7011d5ef89a, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d23301cc72df00459a68186cada82e9, type: 2}
     - target: {fileID: -2453779199822059962, guid: 7ee183af3c98ed241a98e7011d5ef89a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fecf5b7b0ef262c47bbcdc0deeb48d82, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ee183af3c98ed241a98e7011d5ef89a, type: 3}
       propertyPath: m_Name
-      value: Crystal
+      value: P_LavaRock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
