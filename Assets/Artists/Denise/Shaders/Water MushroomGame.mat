@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
+  m_Name: Water MushroomGame
   m_Shader: {fileID: -6465566751694194690, guid: e586e85fa4f11884e81785b1e84987af, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32,7 +32,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _RefractionScale
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -109,8 +109,8 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FoamAmount: 5
-    - _FoamScale: 300
-    - _FoamSpeed: 0.5
+    - _FoamScale: 100
+    - _FoamSpeed: 2
     - _Foamcutoff: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -136,9 +136,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWater: {r: 0.042950362, g: 0.2845462, b: 0.75699997, a: 0}
+    - _DeepWater: {r: 0, g: 0.49110445, b: 0.8867924, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.96981126, g: 0.9643218, b: 0.9643218, a: 0}
-    - _ShallowWater: {r: 0.28783336, g: 0.7675554, b: 0.785, a: 0}
+    - _ShallowWater: {r: 0.08064787, g: 0.90943396, b: 0.51788145, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
