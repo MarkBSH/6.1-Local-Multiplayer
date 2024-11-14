@@ -685,9 +685,17 @@ PrefabInstance:
       value: -5.8471
       objectReference: {fileID: 0}
     - target: {fileID: -3610994655245275649, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3610994655245275649, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 788e58566cfa85a48b916f0ec22ca3f1, type: 2}
+    - target: {fileID: -3610994655245275649, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
     - target: {fileID: 919132149155446097, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
       propertyPath: m_Name
       value: VulcanoIsland
@@ -701,9 +709,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: fecf5b7b0ef262c47bbcdc0deeb48d82, type: 2}
     - target: {fileID: 8459535273387100500, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459535273387100500, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 372fb6773a17183489a7ae6f1a7e175f, type: 2}
+    - target: {fileID: 8459535273387100500, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
     - target: {fileID: 8632055958874330854, guid: 0a28d7e5738164d42bd2795c37976c76, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.70301
@@ -1215,15 +1231,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001205557139838954, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 468
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 6001205557139838954, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 84.2
+      value: 43.6
       objectReference: {fileID: 0}
     - target: {fileID: 6001205557139838954, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3701
+      value: -60.7
       objectReference: {fileID: 0}
     - target: {fileID: 6001205557139838954, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
       propertyPath: m_LocalRotation.w
