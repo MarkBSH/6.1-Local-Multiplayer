@@ -1,25 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnPlayers : MonoBehaviour
 {
-    [SerializeField] GameObject[] players;
+    GameObject[] players;
     [SerializeField] Vector3[] spawnLocations;
 
     [SerializeField] bool isMainIsland = false;
 
     void Start()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < CosmeticsSpawner.Instance.spawningPlayers; i++)
         {
-            Instantiate(players[i], spawnLocations[i], Quaternion.identity);
-            CosmeticsSpawner.Instance.PlaceCosmetics();
-            MinigameChooser.Instance.PlayerSetup();
+            players[i].transform.position = spawnLocations[i];
         }
 
         if (isMainIsland)
         {
+            MinigameChooser.Instance.PlayerSetup();
             ScoreManager.Instance.FindAndSetTexts();
         }
     }

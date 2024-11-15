@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
@@ -84,9 +85,12 @@ public class MainMenu : MonoBehaviour
                 {
                     for (int j = 0; j < mainMenuPlayer.Length; j++)
                     {
+
+                        DontDestroyOnLoad(mainMenuPlayer[j].gameObject);
                         CosmeticsSpawner.Instance.spawningPlayers = totalPlayers;
                         CosmeticsSpawner.Instance.chosenCosmeticsList[j].mesh = cosmeticsList[mainMenuPlayer[j].SelectedSkin].mesh;
                         CosmeticsSpawner.Instance.chosenCosmeticsList[j].material = cosmeticsList[mainMenuPlayer[j].SelectedSkin].material;
+                        CosmeticsSpawner.Instance.PlaceCosmetics();
                     }
                     SceneManager.LoadScene("MarkMain");
                 }

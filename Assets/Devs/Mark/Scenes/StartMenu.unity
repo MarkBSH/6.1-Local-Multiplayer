@@ -2283,7 +2283,7 @@ MonoBehaviour:
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6427375468380348724, guid: 2766a2f893520164391a052069898468, type: 3}
+  m_PlayerPrefab: {fileID: 4441819148865368702, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -3315,6 +3315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawningPlayers: 0
+  players: []
   chosenCosmeticsList:
   - mesh: {fileID: 0}
     material: {fileID: 0}
@@ -3324,7 +3325,11 @@ MonoBehaviour:
     material: {fileID: 0}
   - mesh: {fileID: 0}
     material: {fileID: 0}
-  players: []
+  playerColors:
+  - {fileID: 2100000, guid: 220bc5be76a94a64db5fdcc01258211a, type: 2}
+  - {fileID: 2100000, guid: 9e9467160990d784fb59b629bfd3ff0a, type: 2}
+  - {fileID: 2100000, guid: 9c756ffe2f3bb19479a35fb8baa93c84, type: 2}
+  - {fileID: 2100000, guid: a01485f5b7cf9bc4b95fdcc83df0aba4, type: 2}
 --- !u!4 &506392495
 Transform:
   m_ObjectHideFlags: 0
@@ -4401,10 +4406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
