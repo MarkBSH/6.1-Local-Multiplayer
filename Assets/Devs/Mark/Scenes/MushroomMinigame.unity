@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -185,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -263,6 +267,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acd11d7eaced1704f9766df26356d81f, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -273,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -314,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -395,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 49c44eec362732048b3023376b122d58, type: 2}
+      objectReference: {fileID: 2100000, guid: 5103de64d3ffa38478b35e1f3991cafc, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -406,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -447,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -528,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 49c44eec362732048b3023376b122d58, type: 2}
+      objectReference: {fileID: 2100000, guid: af463abbf42e0b640a259c73243d751e, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -539,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -660,6 +680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584135115}
   - component: {fileID: 584135114}
+  - component: {fileID: 584135116}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -689,7 +710,7 @@ MonoBehaviour:
   - {x: -2.6, y: 14, z: 2.6}
   - {x: -2.6, y: 14, z: -2.6}
   - {x: 2.6, y: 14, z: -2.6}
-  isMainIsland: 1
+  isMainIsland: 0
 --- !u!4 &584135115
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +726,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584135116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584135113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d60bd4349fc1b4bacf87dadfc11d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomSpeed: 15
+  goDownCooldown: 5
 --- !u!1001 &714650195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5103de64d3ffa38478b35e1f3991cafc, type: 2}
+      objectReference: {fileID: 2100000, guid: cf6a1c212dac4fe4d95fb3d664a73f57, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -727,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -768,6 +803,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1104,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5103de64d3ffa38478b35e1f3991cafc, type: 2}
+      objectReference: {fileID: 2100000, guid: acd11d7eaced1704f9766df26356d81f, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1115,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1156,6 +1195,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1342,7 +1385,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: acd11d7eaced1704f9766df26356d81f, type: 2}
+      objectReference: {fileID: 2100000, guid: cf6a1c212dac4fe4d95fb3d664a73f57, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1353,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1394,6 +1437,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1475,7 +1522,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cf6a1c212dac4fe4d95fb3d664a73f57, type: 2}
+      objectReference: {fileID: 2100000, guid: 48e5c948fc796f14b930e4208d628a36, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1486,7 +1533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1527,6 +1574,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1608,7 +1659,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: af463abbf42e0b640a259c73243d751e, type: 2}
+      objectReference: {fileID: 2100000, guid: 5103de64d3ffa38478b35e1f3991cafc, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1619,7 +1670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1660,6 +1711,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1741,7 +1796,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: af463abbf42e0b640a259c73243d751e, type: 2}
+      objectReference: {fileID: 2100000, guid: 48e5c948fc796f14b930e4208d628a36, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1752,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1793,6 +1848,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -1874,7 +1933,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cf6a1c212dac4fe4d95fb3d664a73f57, type: 2}
+      objectReference: {fileID: 2100000, guid: af463abbf42e0b640a259c73243d751e, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1885,7 +1944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1926,6 +1985,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
@@ -2007,7 +2070,7 @@ PrefabInstance:
     - target: {fileID: 1334909129958002369, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd76069f8824f17439d942fa40591383, type: 2}
+      objectReference: {fileID: 2100000, guid: 284518f61bdb4e141a882a415b5c8e1c, type: 2}
     - target: {fileID: 5535181718221779283, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2018,7 +2081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6067962486542933324, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2059,6 +2122,10 @@ PrefabInstance:
     - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881055031265183734, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+      propertyPath: m_TagString
+      value: MushroomPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 7173894794823068906, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
       propertyPath: m_Layer

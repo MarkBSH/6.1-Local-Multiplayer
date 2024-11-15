@@ -20,7 +20,7 @@ public class MainMovement : MonoBehaviour
 
     void Update()
     {
-        m_RB.AddForce(new Vector3(moveDir.x * movementSpeed, 0, moveDir.y * movementSpeed), ForceMode.Force);
+        m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
 
         if (jumpTimer <= jumpCooldown)
         {

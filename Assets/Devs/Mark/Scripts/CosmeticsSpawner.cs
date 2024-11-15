@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [System.Serializable]
 public class ChosenCosmetics
@@ -33,8 +34,8 @@ public class CosmeticsSpawner : MonoBehaviour
     }
 
     public int spawningPlayers;
-    public ChosenCosmetics[] chosenCosmeticsList;
     public GameObject[] players;
+    public ChosenCosmetics[] chosenCosmeticsList;
 
     void Start()
     {
@@ -46,6 +47,7 @@ public class CosmeticsSpawner : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
+            DontDestroyOnLoad(players[i]);
             players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = chosenCosmeticsList[i].mesh;
             players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = chosenCosmeticsList[i].material;
         }

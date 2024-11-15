@@ -166,7 +166,7 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2445180724260730456, guid: 4da378698bc722445ad50053ccb5e317, type: 3}
+      - m_Target: {fileID: 6488011187199361856}
         m_TargetAssemblyTypeName: PlayerDeathScript, Assembly-CSharp
         m_MethodName: DeathEvent
         m_Mode: 1
