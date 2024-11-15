@@ -10,6 +10,7 @@ public class Countdown : MonoBehaviour
     [SerializeField] private Image countdown;
     [SerializeField] private Sprite redbackgroundthing;
     [SerializeField] private Animator Animator;
+    [SerializeField] private Animator Animatorfinish;
     [SerializeField] private SpawnLavaMonster SpawnLavaMonster;
     void Start()
     {
@@ -34,7 +35,10 @@ public class Countdown : MonoBehaviour
             }
         }
         _textMeshPro.text = "0";
+        Animatorfinish.SetTrigger("hide");
         SpawnLavaMonster.stopspawn();
         Animator.SetTrigger("effect");
+        Animatorfinish.SetTrigger("finish");
+        
     }
 }

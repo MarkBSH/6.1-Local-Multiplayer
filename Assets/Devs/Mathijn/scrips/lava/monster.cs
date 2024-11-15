@@ -8,6 +8,7 @@ public class monster : MonoBehaviour
     private Vector3 startPosition;  
     private float journeyLength;
     private float startTime;
+    [SerializeField] private Animator Animator;
 
     void Start()
     {
@@ -23,7 +24,8 @@ public class monster : MonoBehaviour
         transform.position = Vector3.Lerp(startPosition, targetPosition, fractionOfJourney);
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
-            transform.position = targetPosition;  
+            transform.position = targetPosition;
+            Animator.SetTrigger("down");
         }
     }
 }
