@@ -1,0 +1,84 @@
+{
+    "name": "buttons",
+    "maps": [
+        {
+            "name": "WindUpGame",
+            "id": "b1627f49-0400-4831-952f-76e3ec3a4214",
+            "actions": [
+                {
+                    "name": "wind up",
+                    "type": "Button",
+                    "id": "9624ccba-acd0-4b91-9b2c-4cc87b4c5716",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5aca996c-7eab-4cd3-8b46-24d186c70ad2",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "wind up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf44c878-481a-4f55-be2f-344b8903a636",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "wind up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LavaGame",
+            "id": "57b85585-0587-4088-8e76-b2729e389afd",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "afb2030e-1c89-44e6-a8dc-c1d07374baae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3b2432b5-ad10-4168-8cec-5e7218683499",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "controler",
+            "bindingGroup": "controler",
+            "devices": []
+        },
+        {
+            "name": "pc",
+            "bindingGroup": "pc",
+            "devices": []
+        }
+    ]
+}
