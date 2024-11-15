@@ -105,7 +105,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisstortionScale: -1.6
+    - _DisstortionScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -113,8 +113,8 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NoisePower: 2.17
-    - _NoiseScale: 1630
+    - _NoisePower: 3.23
+    - _NoiseScale: 500
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -130,7 +130,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 12.38025, g: 1.4259975, b: 0, a: 1}
+    - _BaseColor: {r: 16.94838, g: 1.9521694, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PanSpeed: {r: 0.0013, g: 0.0013, b: 0, a: 0}

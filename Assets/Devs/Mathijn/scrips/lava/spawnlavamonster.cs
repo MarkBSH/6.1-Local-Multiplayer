@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SpawnPrefabsAroundPoint : MonoBehaviour
+public class SpawnLavaMonster : MonoBehaviour
 {
     public GameObject prefabToSpawn;
     public Transform midelPoint;
@@ -13,21 +13,35 @@ public class SpawnPrefabsAroundPoint : MonoBehaviour
     {
         if (prefabToSpawn == null || midelPoint == null)
         {
-            Debug.LogWarning("habiby you need to assighn the fucking prefab and middlepoint");
-        } else 
+            Debug.LogWarning("Habiby, you need to assign the prefab and the middle point!");
+        }
+        else
         {
-            StartCoroutine(SpawnPrefabsWithDelay());
+            StartCoroutine(startspawing());
         }
     }
 
-    private IEnumerator SpawnPrefabsWithDelay()
+    private IEnumerator startspawing()
     {
         while (spawning)
         {
             Vector2 randomDirection = Random.insideUnitCircle.normalized;
             Vector3 spawnPosition = midelPoint.position + new Vector3(randomDirection.x, 0, randomDirection.y) * spawnRadius;
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+            Vector3 directionToMiddle = (midelPoint.position - spawnPosition).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(directionToMiddle);
+            Instantiate(prefabToSpawn, spawnPosition, lookRotation);
             yield return new WaitForSeconds(spawncooldown);
         }
+    }
+
+    public void stopspawn()
+    {
+        spawning = false;
+    }
+
+    public void startspawn()
+    {
+        spawning = true;
+        StartCoroutine(startspawing());
     }
 }
