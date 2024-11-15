@@ -8,6 +8,12 @@ public class StartScreenMovement : MonoBehaviour
     [SerializeField] private float verticalAmplitude;
     [SerializeField] private float verticalFrequency;
 
+    void Start()
+    {
+        verticalAmplitude = Random.Range(0.6f, 1.4f);
+        verticalFrequency = Random.Range(0.6f, 1.4f);
+    }
+
     // Update is called once per frame
     void Update()
     {

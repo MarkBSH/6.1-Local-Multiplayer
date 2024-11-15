@@ -13,13 +13,11 @@ public class StartIslandPlayerScripts : MonoBehaviour
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
-            players[i].GetComponent<PlayerChooseGame>().enabled = true;
+            players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
             players[i].GetComponent<MainMovement>().enabled = true;
-            players[i].GetComponent<MainMovement>().movementSpeed = 8;
+            players[i].GetComponent<MainMovement>().movementSpeed = 12;
             players[i].GetComponent<MainMovement>().jumpForce = 300;
             players[i].GetComponent<MainMenuPlayer>().enabled = false;
-            players[i].GetComponent<PlayerHitScript>().enabled = false;
-            players[i].GetComponent<PlayerDeathScript>().enabled = false;
         }
     }
 }

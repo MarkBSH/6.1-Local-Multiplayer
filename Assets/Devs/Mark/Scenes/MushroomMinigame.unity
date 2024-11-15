@@ -700,11 +700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cedc81bac7a154db99398521e77673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 4441819148865368702, guid: 4da378698bc722445ad50053ccb5e317, type: 3}
-  - {fileID: 7667364290627596313, guid: 5d3f623a5245d184882e91d4c8d36a90, type: 3}
-  - {fileID: 3875029500769811814, guid: 6f0c0b48ab84e6d46987d54cd1b471d2, type: 3}
-  - {fileID: 8000518281768873781, guid: 2e0dc4da884f76d4999c2267864cc5a5, type: 3}
   spawnLocations:
   - {x: 2.6, y: 14, z: 2.6}
   - {x: -2.6, y: 14, z: 2.6}
@@ -738,8 +733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d60bd4349fc1b4bacf87dadfc11d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mushroomSpeed: 15
-  goDownCooldown: 5
+  mushroomSpeed: 10
+  goDownCooldown: 1
 --- !u!1001 &714650195
 PrefabInstance:
   m_ObjectHideFlags: 0
