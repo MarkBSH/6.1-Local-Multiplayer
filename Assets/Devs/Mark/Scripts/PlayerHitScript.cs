@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerHitScript : MonoBehaviour
 {
-    [SerializeField] UnityEvent hitEvent;
+    public UnityEvent hitEvent;
 
     void OnTriggerEnter(Collider other)
     {

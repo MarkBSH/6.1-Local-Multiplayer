@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerDeathScript : MonoBehaviour
 {
-    [SerializeField] float deathTimer;
-    [SerializeField] GameObject deathParticals;
+    public float deathTimer;
+    public GameObject deathParticals;
 
     public void DeathEvent()
     {
         Instantiate(deathParticals, transform.position, Quaternion.identity);
-        Destroy(gameObject, deathTimer);
+        StartCoroutine(DeathCooldown());
+    }
+
+    IEnumerator DeathCooldown()
+    {
+        yield return new WaitForSeconds(deathTimer);
+        gameObject.SetActive(false);
     }
 }
