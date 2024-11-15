@@ -18,6 +18,7 @@ public class StartIslandPlayerScripts : MonoBehaviour
             players[i].GetComponent<MainMovement>().movementSpeed = 12;
             players[i].GetComponent<MainMovement>().jumpForce = 300;
             players[i].GetComponent<MainMenuPlayer>().enabled = false;
+            players[i].GetComponent<TaserAttack>().enabled = false;
         }
     }
 }

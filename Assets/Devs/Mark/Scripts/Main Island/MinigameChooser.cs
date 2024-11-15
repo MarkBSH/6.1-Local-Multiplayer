@@ -95,7 +95,7 @@ public class MinigameChooser : MonoBehaviour
     {
         countdownText.SetActive(false);
         string[] confirmedGames = chosenGames;
-        int tempChosenPlayer = Random.Range(0, games.Length - 1);
+        int tempChosenPlayer = Random.Range(0, games.Length);
         string tempChosenAnimation = "Player " + (tempChosenPlayer + 1);
         choosingPanel.SetActive(true);
         chooseAnimation.SetTrigger(tempChosenAnimation);

@@ -681,6 +681,7 @@ GameObject:
   - component: {fileID: 584135115}
   - component: {fileID: 584135114}
   - component: {fileID: 584135116}
+  - component: {fileID: 584135117}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -733,8 +734,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d60bd4349fc1b4bacf87dadfc11d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   mushroomSpeed: 10
   goDownCooldown: 1
+--- !u!114 &584135117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584135113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f7bd2a82ae9974ea4bb2be016574a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterParticals: {fileID: 2994277504573196161, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
 --- !u!1001 &714650195
 PrefabInstance:
   m_ObjectHideFlags: 0

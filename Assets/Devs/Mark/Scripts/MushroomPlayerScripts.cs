@@ -20,6 +20,7 @@ public class MushroomPlayerScripts : MonoBehaviour
             players[i].GetComponent<MainMovement>().jumpForce = 400;
             players[i].GetComponent<PlayerDeathScript>().deathTimer = 3;
             players[i].GetComponent<PlayerDeathScript>().deathParticals = waterParticals;
+            players[i].GetComponent<TaserAttack>().enabled = true;
         }
     }
 }

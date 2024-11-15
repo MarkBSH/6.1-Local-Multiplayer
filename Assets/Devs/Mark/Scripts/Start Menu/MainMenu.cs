@@ -85,7 +85,6 @@ public class MainMenu : MonoBehaviour
                 {
                     for (int j = 0; j < mainMenuPlayer.Length; j++)
                     {
-
                         DontDestroyOnLoad(mainMenuPlayer[j].gameObject);
                         CosmeticsSpawner.Instance.spawningPlayers = totalPlayers;
                         CosmeticsSpawner.Instance.chosenCosmeticsList[j].mesh = cosmeticsList[mainMenuPlayer[j].SelectedSkin].mesh;

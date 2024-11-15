@@ -13,6 +13,8 @@ public class MainMovement : MonoBehaviour
     float jumpCooldown = 0.2f;
     float jumpTimer = 0;
 
+    public float stunTimer;
+
     void Start()
     {
         m_RB = GetComponent<Rigidbody>();
@@ -20,11 +22,21 @@ public class MainMovement : MonoBehaviour
 
     void Update()
     {
-        m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
+        if (stunTimer <= 0)
+        {
+            m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
+        }
+
+        gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);
 
         if (jumpTimer <= jumpCooldown)
         {
             jumpTimer += Time.deltaTime;
+        }
+
+        if (stunTimer > 0)
+        {
+            stunTimer -= Time.deltaTime;
         }
     }
 
@@ -35,14 +47,14 @@ public class MainMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext _context)
     {
-        if (_context.performed && canJump && jumpTimer >= jumpCooldown)
+        if (_context.performed && canJump && jumpTimer >= jumpCooldown && stunTimer <= 0)
         {
             m_RB.AddForce(transform.up * jumpForce);
             jumpTimer = 0;
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         canJump = true;
     }

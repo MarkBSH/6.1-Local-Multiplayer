@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 9213652186116492127}
   - component: {fileID: 7455730769088410580}
   - component: {fileID: 8395056830539851017}
+  - component: {fileID: 526740809262842143}
   - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
@@ -291,6 +292,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTimer: 1
   deathParticals: {fileID: 9157549960958748663, guid: c8c757602d29da84abf3b5c2b03dfffc, type: 3}
+--- !u!114 &526740809262842143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9d88b71f77e194f90c86cccd0b6f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taserObject: {fileID: 4883304412236708174, guid: 87b9626596bfe01449055139c2b4d189, type: 3}
+  attackCooldown: 3
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +467,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6d7c2750-1440-43b8-b25e-73c082a137fa
     m_ActionName: Player/Jump1[/Keyboard/space,/XInputControllerWindows1/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 526740809262842143}
+        m_TargetAssemblyTypeName: TaserAttack, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 40132286-2413-4ee8-bf94-04fa5dc72af4
+    m_ActionName: Player/TaserAttack[/Keyboard/e,/XInputControllerWindows/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -526,5 +557,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.2, z: 0.3}
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
   m_Center: {x: 0, y: -0.5, z: 0}
