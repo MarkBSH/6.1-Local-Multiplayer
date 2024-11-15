@@ -36,6 +36,7 @@ public class CosmeticsSpawner : MonoBehaviour
     public int spawningPlayers;
     public GameObject[] players;
     public ChosenCosmetics[] chosenCosmeticsList;
+    public Material[] playerColors;
 
     void Start()
     {
@@ -47,7 +48,7 @@ public class CosmeticsSpawner : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
-            DontDestroyOnLoad(players[i]);
+            players[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = playerColors[i];
             players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = chosenCosmeticsList[i].mesh;
             players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = chosenCosmeticsList[i].material;
         }

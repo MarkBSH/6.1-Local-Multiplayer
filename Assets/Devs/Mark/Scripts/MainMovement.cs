@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class MainMovement : MonoBehaviour
 {
     Rigidbody m_RB;
-    public float movementSpeed = 10;
     Vector2 moveDir;
-    public float jumpForce = 10;
+    public float movementSpeed;
+    public float jumpForce;
     bool canJump;
     float jumpCooldown = 0.2f;
     float jumpTimer = 0;
