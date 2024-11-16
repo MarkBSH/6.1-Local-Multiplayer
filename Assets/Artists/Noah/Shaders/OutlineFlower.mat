@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineBridge
+  m_Name: OutlineFlower
   m_Shader: {fileID: -6465566751694194690, guid: 48ac541bbba66614caf0150e81b4b48b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -50,7 +50,7 @@ Material:
     - _WindNoiseSpeed: 1
     - _WindSpeed: 0.5
     m_Colors:
-    - _OutlineColor: {r: 0.2679245, g: 0.12555529, b: 0.060156602, a: 0}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _WindNoiseContrast: {r: 0, g: 1, b: 0, a: 0}
     - _WindNoiseScale: {r: 10, g: 20, b: 0, a: 0}
   m_BuildTextureStacks: []
