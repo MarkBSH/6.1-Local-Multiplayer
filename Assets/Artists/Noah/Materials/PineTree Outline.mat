@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tree Outline
+  m_Name: PineTree Outline
   m_Shader: {fileID: -6465566751694194690, guid: 48ac541bbba66614caf0150e81b4b48b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -51,7 +51,7 @@ Material:
     - _WindNoiseSpeed: 0.6
     - _WindSpeed: 0.3
     m_Colors:
-    - _OutlineColor: {r: 0, g: 0.3660378, b: 0.016308708, a: 0}
+    - _OutlineColor: {r: 0, g: 0.19399999, b: 0.1342933, a: 0}
     - _WindNoiseContrast: {r: -0.2, g: 1.2, b: 0, a: 0}
     - _WindNoiseScale: {r: 40, g: 100, b: 0, a: 0}
   m_BuildTextureStacks: []
