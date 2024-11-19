@@ -27,7 +27,6 @@ public class monster : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
             transform.position = targetPosition;
-            Debug.Log("down anamtions plsssssssssss");
             Animator.Play("lavawavedown");
         }
     }
