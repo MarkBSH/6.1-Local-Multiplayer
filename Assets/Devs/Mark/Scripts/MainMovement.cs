@@ -8,6 +8,7 @@ public class MainMovement : MonoBehaviour
     Rigidbody m_RB;
     Vector2 moveDir;
     public float movementSpeed;
+    public float movementMax;
     public float jumpForce;
     bool canJump;
     float jumpCooldown = 0.2f;
@@ -25,6 +26,7 @@ public class MainMovement : MonoBehaviour
         if (stunTimer <= 0)
         {
             m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
+            m_RB.velocity = m_RB.velocity.normalized * movementMax;
         }
 
         gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);    
