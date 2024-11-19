@@ -7,7 +7,7 @@ public class MainMenuPlayer : MonoBehaviour
 {
     public bool isReady = false;
     public int playerNum;
-    public int SelectedSkin = 0;
+    public int selectedSkin = 0;
 
     Vector2 moveDir;
 
@@ -41,10 +41,10 @@ public class MainMenuPlayer : MonoBehaviour
     {
         if (_context.performed)
         {
-            SelectedSkin--;
-            if (SelectedSkin < 0)
+            selectedSkin--;
+            if (selectedSkin < 0)
             {
-                SelectedSkin = MainMenu.Instance.cosmeticsList.Count - 1;
+                selectedSkin = MainMenu.Instance.totalSkins - 1;
             }
             MainMenu.Instance.UpdateCosmVisuals();
         }
@@ -54,10 +54,10 @@ public class MainMenuPlayer : MonoBehaviour
     {
         if (_context.performed)
         {
-            SelectedSkin++;
-            if (SelectedSkin > MainMenu.Instance.cosmeticsList.Count - 1)
+            selectedSkin++;
+            if (selectedSkin > MainMenu.Instance.totalSkins - 1)
             {
-                SelectedSkin = 0;
+                selectedSkin = 0;
             }
             MainMenu.Instance.UpdateCosmVisuals();
         }

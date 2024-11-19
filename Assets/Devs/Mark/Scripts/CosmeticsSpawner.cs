@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[System.Serializable]
-public class ChosenCosmetics
-{
-    public Mesh mesh;
-    public Material material;
-}
-
 public class CosmeticsSpawner : MonoBehaviour
 {
     private static CosmeticsSpawner m_Instance;
@@ -35,7 +28,7 @@ public class CosmeticsSpawner : MonoBehaviour
 
     public int spawningPlayers;
     public GameObject[] players;
-    public ChosenCosmetics[] chosenCosmeticsList;
+    public int[] chosenCosmetics;
     public Material[] playerColors;
 
     void Start()
@@ -48,9 +41,12 @@ public class CosmeticsSpawner : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
-            players[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = playerColors[i];
-            players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = chosenCosmeticsList[i].mesh;
-            players[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = chosenCosmeticsList[i].material;
+            players[i].transform.GetChild(0).transform.GetChild(MainMenu.Instance.totalSkins).GetComponent<SkinnedMeshRenderer>().material = playerColors[i];
+            for (int j = 0; j < MainMenu.Instance.totalSkins; j++)
+            {
+                players[i].transform.GetChild(0).transform.GetChild(j).gameObject.SetActive(false);
+            }
+            players[i].transform.GetChild(0).transform.GetChild(players[i].GetComponent<MainMenuPlayer>().selectedSkin).gameObject.SetActive(true);
         }
     }
 }

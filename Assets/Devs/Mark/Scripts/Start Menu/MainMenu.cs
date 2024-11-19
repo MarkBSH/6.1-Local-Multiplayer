@@ -4,13 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class CosmeticStats
-{
-    public Mesh mesh;
-    public Material material;
-}
-
 public class MainMenu : MonoBehaviour
 {
     private static MainMenu m_Instance;
@@ -34,9 +27,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    [Header("Cosmetics list")]
-    public List<CosmeticStats> cosmeticsList = new();
-
     [Header("Canvas items")]
 
     [SerializeField] GameObject[] activeCanv;
@@ -48,6 +38,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject[] skinSelector;
     public GameObject[] cosmSelector;
+    public int totalSkins;
     public MainMenuPlayer[] mainMenuPlayer;
 
     int totalPlayers = 0;
@@ -86,9 +77,9 @@ public class MainMenu : MonoBehaviour
                     for (int j = 0; j < mainMenuPlayer.Length; j++)
                     {
                         DontDestroyOnLoad(mainMenuPlayer[j].gameObject);
+                        CosmeticsSpawner.Instance.chosenCosmetics = new int[mainMenuPlayer.Length];
                         CosmeticsSpawner.Instance.spawningPlayers = totalPlayers;
-                        CosmeticsSpawner.Instance.chosenCosmeticsList[j].mesh = cosmeticsList[mainMenuPlayer[j].SelectedSkin].mesh;
-                        CosmeticsSpawner.Instance.chosenCosmeticsList[j].material = cosmeticsList[mainMenuPlayer[j].SelectedSkin].material;
+                        CosmeticsSpawner.Instance.chosenCosmetics[j] = mainMenuPlayer[j].selectedSkin;
                         CosmeticsSpawner.Instance.PlaceCosmetics();
                     }
                     SceneManager.LoadScene("MarkMain");
@@ -120,20 +111,36 @@ public class MainMenu : MonoBehaviour
         {
             for (int j = 0; j < 3; j++)
             {
-                int shownSkin = mainMenuPlayer[i].SelectedSkin - 1 + j;
+                int shownSkin = mainMenuPlayer[i].selectedSkin - 1 + j;
                 if (shownSkin < 0)
                 {
-                    shownSkin = cosmeticsList.Count - 1;
+                    shownSkin = totalSkins - 1;
                 }
-                if (shownSkin > cosmeticsList.Count - 1)
+                if (shownSkin > totalSkins - 1)
                 {
                     shownSkin = 0;
                 }
-                cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[shownSkin].mesh;
-                cosmSelector[i * 3 + j].transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[shownSkin].material;
+
+                for (int k = 0; k < totalSkins; k++)
+                {
+                    cosmSelector[i * 3 + j].transform.GetChild(k).gameObject.SetActive(false);
+                }
+
+                cosmSelector[i * 3 + j].transform.GetChild(shownSkin).gameObject.SetActive(true);
             }
-            skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshFilter>().mesh = cosmeticsList[mainMenuPlayer[i].SelectedSkin].mesh;
-            skinSelector[i].transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().material = cosmeticsList[mainMenuPlayer[i].SelectedSkin].material;
+
+            for (int j = 0; j < totalSkins; j++)
+            {
+                skinSelector[i].transform.GetChild(0).transform.GetChild(j).gameObject.SetActive(false);
+            }
+
+            skinSelector[i].transform.GetChild(0).transform.GetChild(mainMenuPlayer[i].selectedSkin).gameObject.SetActive(true);
+        }
+
+        Animator[] animators = GameObject.FindObjectsOfType<Animator>();
+        for (int i = 0; i < animators.Length; i++)
+        {
+            animators[i].SetTrigger("GoToIdle");
         }
     }
 }
