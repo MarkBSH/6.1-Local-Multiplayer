@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class monster : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class monster : MonoBehaviour
         startPosition = transform.position;
         journeyLength = Vector3.Distance(startPosition, targetPosition);
         startTime = Time.time;
+        
     }
 
     void Update()
@@ -25,7 +27,8 @@ public class monster : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
             transform.position = targetPosition;
-            Animator.SetTrigger("down");
+            Debug.Log("down anamtions plsssssssssss");
+            Animator.Play("lavawavedown");
         }
     }
 }

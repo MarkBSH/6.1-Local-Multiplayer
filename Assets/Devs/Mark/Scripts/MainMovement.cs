@@ -27,7 +27,7 @@ public class MainMovement : MonoBehaviour
             m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
         }
 
-        gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);
+        gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);    
 
         if (jumpTimer <= jumpCooldown)
         {
