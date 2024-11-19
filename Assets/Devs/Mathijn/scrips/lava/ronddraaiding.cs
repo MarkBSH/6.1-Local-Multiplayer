@@ -17,7 +17,7 @@ public class Ronddraaiding : MonoBehaviour
     {
         if (EnableRotation)
         {
-            draaiding.Rotate(0, 0, rotationSpeed);
+            draaiding.Rotate(0, rotationSpeed, 0);
         }
     }
 
