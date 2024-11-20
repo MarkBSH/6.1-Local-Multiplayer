@@ -106,7 +106,7 @@ public class MainMenu : MonoBehaviour
             mainMenuPlayer[i] = mainMenuPlayerTemp[mainMenuPlayerTemp.Length - 1 - i];
         }
         //players are tp'd to under the ground to not see them in te start menu and the number of the newest player is updated
-        mainMenuPlayer[totalPlayers].gameObject.transform.position = new Vector3(0, -2, 0);
+        mainMenuPlayer[totalPlayers].gameObject.transform.position = new Vector3(0, -10, 0);
         mainMenuPlayer[totalPlayers].playerNum = totalPlayers;
         //a ui for the newest player is changed
         activeCanv[totalPlayers].SetActive(true);

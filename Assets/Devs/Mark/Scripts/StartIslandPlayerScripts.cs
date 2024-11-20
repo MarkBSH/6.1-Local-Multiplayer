@@ -16,8 +16,8 @@ public class StartIslandPlayerScripts : MonoBehaviour
             players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
             players[i].GetComponent<MainMovement>().enabled = true;
             players[i].GetComponent<MainMovement>().movementSpeed = 24;
-            players[i].GetComponent<MainMovement>().jumpForce = 750;
-            players[i].GetComponent<MainMovement>().movementMax = 18;
+            players[i].GetComponent<MainMovement>().jumpForce = 650;
+            players[i].GetComponent<MainMovement>().movementMax = 10;
             players[i].GetComponent<MainMenuPlayer>().enabled = false;
             players[i].GetComponent<TaserAttack>().enabled = false;
         }

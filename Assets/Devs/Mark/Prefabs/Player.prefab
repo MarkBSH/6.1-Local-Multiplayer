@@ -370,7 +370,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Height: 4.5
+  m_Height: 4.6
   m_Direction: 1
   m_Center: {x: 0, y: 1.8, z: 0}
 --- !u!65 &-3125204758730741984
@@ -837,6 +837,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 170.24574
       objectReference: {fileID: 0}
+    - target: {fileID: 6271639285113440139, guid: 2c4aaa80c1f0e634296d023cec36e729, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a04d18d3cff3c694b9a33a6e6d2859da, type: 2}
     - target: {fileID: 6929723617662555576, guid: 2c4aaa80c1f0e634296d023cec36e729, type: 3}
       propertyPath: m_Controller
       value: 
