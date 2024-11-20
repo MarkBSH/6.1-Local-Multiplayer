@@ -784,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3057453279522916640, guid: 9467c648005e77a49af4c4a3b2bc576d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35343838
+      value: -0.5934383
       objectReference: {fileID: 0}
     - target: {fileID: 3057453279522916640, guid: 9467c648005e77a49af4c4a3b2bc576d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 455001448}
   m_Layer: 0
   m_Name: Sphere (4)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 511714056}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1414,10 +1414,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocations:
-  - {x: -1.4, y: 0, z: 4}
-  - {x: 1.4, y: 0, z: 4}
-  - {x: -2.1, y: 0, z: 3.3}
-  - {x: 2.1, y: 0, z: 3.3}
+  - {x: -1.4, y: 0.5, z: 4}
+  - {x: 1.4, y: 0.5, z: 4}
+  - {x: -2.1, y: 0.5, z: 3.3}
+  - {x: 2.1, y: 0.5, z: 3.3}
   isMainIsland: 0
 --- !u!4 &608834479
 Transform:
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 786491957}
   m_Layer: 0
   m_Name: Sphere (8)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2583,7 +2583,7 @@ GameObject:
   - component: {fileID: 896367422}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2689,7 +2689,7 @@ GameObject:
   - component: {fileID: 1029406688}
   m_Layer: 0
   m_Name: Sphere (3)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2955,7 +2955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -76.34, y: -35.300003}
+  m_AnchoredPosition: {x: -76.339966, y: -35.30005}
   m_SizeDelta: {x: 950, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074082295
@@ -3626,6 +3626,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windUpPower: 01000000010000000100000001000000
+--- !u!1001 &1353985751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3163195
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6108947
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678199600390736958, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441819148865368702, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b642ad003262b8c478b02aaeb7b611ea, type: 3}
 --- !u!1 &1423877107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,7 +3697,7 @@ GameObject:
   - component: {fileID: 1423877109}
   m_Layer: 0
   m_Name: Sphere (7)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4266,8 +4323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draaiding: {fileID: 423978323}
-  rotationSpeed: 0.96
-  EnableRotation: 1
+  draaispeed: 1
+  aanHetDraaien: 1
 --- !u!1001 &1479052229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4348,7 +4405,7 @@ GameObject:
   - component: {fileID: 1496656452}
   m_Layer: 0
   m_Name: Sphere (6)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5008,15 +5065,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.88
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.88
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.88
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5024,7 +5081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 92931621556305770, guid: 905b468d086e69b4cbe9a05ab132b905, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6141,7 +6198,7 @@ GameObject:
   - component: {fileID: 1954797888}
   m_Layer: 0
   m_Name: Sphere (5)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6365,7 +6422,7 @@ GameObject:
   - component: {fileID: 1996911665}
   m_Layer: 0
   m_Name: Sphere (2)
-  m_TagString: Untagged
+  m_TagString: DeathHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6850,3 +6907,4 @@ SceneRoots:
   - {fileID: 233330168}
   - {fileID: 1681616621}
   - {fileID: 423978322}
+  - {fileID: 1353985751}

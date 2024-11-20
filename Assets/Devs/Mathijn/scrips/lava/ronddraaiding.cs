@@ -5,8 +5,8 @@ using UnityEngine;
 public class Ronddraaiding : MonoBehaviour
 {
     public Transform draaiding;
-    public float rotationSpeed = 1f;
-    public bool EnableRotation = true;
+    public float draaispeed = 1f;
+    public bool aanHetDraaien = true;
 
     private void Start()
     {
@@ -15,9 +15,9 @@ public class Ronddraaiding : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (EnableRotation)
+        if (aanHetDraaien)
         {
-            draaiding.Rotate(0, rotationSpeed, 0);
+            draaiding.Rotate(0, draaispeed, 0);
         }
     }
 
@@ -26,7 +26,7 @@ public class Ronddraaiding : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(10f);
-            rotationSpeed += 0.33f;
+            draaispeed += 0.33f;
         }
     }
 }

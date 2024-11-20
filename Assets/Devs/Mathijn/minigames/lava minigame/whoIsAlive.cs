@@ -25,7 +25,6 @@ public class whoIsAlive : MonoBehaviour
             players[i].GetComponent<PlayerHitScript>().hitEvent.AddListener(() => player(players[i])); 
             players[i].GetComponent<TaserAttack>().enabled = false;
 
-            // Initially, assume all players are alive
             playersAlive[i] = players[i];
         }
     }
@@ -35,7 +34,6 @@ public class whoIsAlive : MonoBehaviour
         playersAlive = GameObject.FindGameObjectsWithTag("Player");
         numberOfAlivePlayers = playersAlive.Length;
 
-        // Log the number of players left
         Debug.Log(numberOfAlivePlayers + " players left");
 
         if (numberOfAlivePlayers == 1)
@@ -46,6 +44,7 @@ public class whoIsAlive : MonoBehaviour
 
     public void player(GameObject player)
     {
+        Debug.Log("theo is dik");
         for (int i = 0; i < players.Length; i++)
         {
             if (player == players[i])
