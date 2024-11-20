@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MainMovement : MonoBehaviour
 {
@@ -21,8 +22,11 @@ public class MainMovement : MonoBehaviour
     void Start()
     {
         m_RB = GetComponent<Rigidbody>();
-        playerAnimator = GetComponent<Animator>();
-        skinAnimator = GetComponent<Animator>();
+        playerAnimator = transform.GetChild(0).GetComponent<Animator>();
+        if (GetComponent<MainMenuPlayer>().selectedSkin == 0)
+        {
+            skinAnimator = transform.GetChild(0).transform.GetChild(GetComponent<MainMenuPlayer>().selectedSkin).GetComponent<Animator>();
+        }
     }
 
     void Update()
@@ -54,6 +58,48 @@ public class MainMovement : MonoBehaviour
     public void GetMovement(InputAction.CallbackContext _context)
     {
         moveDir = _context.ReadValue<Vector2>();
+        if (_context.performed)
+        {
+            if (SceneManager.GetActiveScene().name != "MushroomMinigame")
+            {
+                playerAnimator.SetBool("Move", true);
+                if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+                {
+                    skinAnimator.SetBool("Move", true);
+                }
+                playerAnimator.SetBool("RifleWalk", false);
+                if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+                {
+                    skinAnimator.SetBool("RifleWalk", false);
+                }
+            }
+            else
+            {
+                playerAnimator.SetBool("Move", false);
+                if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+                {
+                    skinAnimator.SetBool("Move", false);
+                }
+                playerAnimator.SetBool("RifleWalk", true);
+                if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+                {
+                    skinAnimator.SetBool("RifleWalk", true);
+                }
+            }
+        }
+        if (_context.canceled)
+        {
+            playerAnimator.SetBool("Move", false);
+            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            {
+                skinAnimator.SetBool("Move", false);
+            }
+            playerAnimator.SetBool("RifleWalk", false);
+            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            {
+                skinAnimator.SetBool("RifleWalk", false);
+            }
+        }
     }
 
     public void Jump(InputAction.CallbackContext _context)
@@ -62,6 +108,11 @@ public class MainMovement : MonoBehaviour
         {
             m_RB.AddForce(transform.up * jumpForce);
             jumpTimer = 0;
+            playerAnimator.SetTrigger("Jump");
+            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            {
+                skinAnimator.SetTrigger("Jump");
+            }
         }
     }
 
