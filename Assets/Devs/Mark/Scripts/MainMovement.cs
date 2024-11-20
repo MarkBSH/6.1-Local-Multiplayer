@@ -23,7 +23,7 @@ public class MainMovement : MonoBehaviour
     {
         m_RB = GetComponent<Rigidbody>();
         playerAnimator = transform.GetChild(0).GetComponent<Animator>();
-        if (GetComponent<MainMenuPlayer>().selectedSkin == 0)
+        if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
         {
             skinAnimator = transform.GetChild(0).transform.GetChild(GetComponent<MainMenuPlayer>().selectedSkin).GetComponent<Animator>();
         }
@@ -39,9 +39,9 @@ public class MainMovement : MonoBehaviour
                 m_RB.velocity = m_RB.velocity.normalized * movementMax;
             }
         }
-        if (moveDir.x != 0 || moveDir.y != 0)
+        if (m_RB.velocity.x > 0.1f || m_RB.velocity.z > 0.1f || m_RB.velocity.x < -0.1f || m_RB.velocity.z < -0.1f)
         {
-            gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);
+            gameObject.transform.forward = new(m_RB.velocity.x, 0, m_RB.velocity.z);
         }
 
         if (jumpTimer <= jumpCooldown)
