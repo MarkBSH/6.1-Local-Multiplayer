@@ -17,9 +17,9 @@ public class MushroomPlayerScripts : MonoBehaviour
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
             players[i].GetComponent<MainMovement>().enabled = true;
-            players[i].GetComponent<MainMovement>().movementSpeed = 18;
-            players[i].GetComponent<MainMovement>().jumpForce = 400;
-            players[i].GetComponent<MainMovement>().movementMax = 6;
+            players[i].GetComponent<MainMovement>().movementSpeed = 26;
+            players[i].GetComponent<MainMovement>().jumpForce = 800;
+            players[i].GetComponent<MainMovement>().movementMax = 10;
             players[i].GetComponent<PlayerDeathScript>().deathTimer = 3;
             players[i].GetComponent<PlayerDeathScript>().deathParticals = waterParticals;
             players[i].GetComponent<PlayerHitScript>().hitEvent.AddListener(() => players[i].GetComponent<PlayerDeathScript>().DeathEvent());
