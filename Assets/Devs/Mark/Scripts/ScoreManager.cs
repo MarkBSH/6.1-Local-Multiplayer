@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    //singleton
     private static ScoreManager m_Instance;
     public static ScoreManager Instance
     {
@@ -26,14 +27,14 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    int P1Score;
-    TextMeshProUGUI P1Text;
-    int P2Score;
-    TextMeshProUGUI P2Text;
-    int P3Score;
-    TextMeshProUGUI P3Text;
-    int P4Score;
-    TextMeshProUGUI P4Text;
+    int P1Score; //< player 1 score
+    TextMeshProUGUI P1Text; //< player 1 score text
+    int P2Score; //< player 2 score
+    TextMeshProUGUI P2Text; //< player 2 score text
+    int P3Score; //< player 3 score
+    TextMeshProUGUI P3Text; //< player 3 score text
+    int P4Score; //< player 4 score
+    TextMeshProUGUI P4Text; //< player 4 score text
 
     void Start()
     {
@@ -59,6 +60,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    //function to show the scores on screen
     public void FindAndSetTexts()
     {
         P1Text = GameObject.Find("P1Text").GetComponent<TextMeshProUGUI>();

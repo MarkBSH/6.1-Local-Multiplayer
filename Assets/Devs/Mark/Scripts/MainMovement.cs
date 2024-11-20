@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class MainMovement : MonoBehaviour
 {
     Rigidbody m_RB;
+    Animator playerAnimator;
+    Animator skinAnimator;
     Vector2 moveDir;
     public float movementSpeed;
     public float movementMax;
@@ -19,6 +21,8 @@ public class MainMovement : MonoBehaviour
     void Start()
     {
         m_RB = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
+        skinAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,8 +35,10 @@ public class MainMovement : MonoBehaviour
                 m_RB.velocity = m_RB.velocity.normalized * movementMax;
             }
         }
-
-        gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);
+        if (moveDir.x != 0 || moveDir.y != 0)
+        {
+            gameObject.transform.forward = new(moveDir.x, 0, moveDir.y);
+        }
 
         if (jumpTimer <= jumpCooldown)
         {
