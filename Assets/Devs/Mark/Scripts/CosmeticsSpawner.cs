@@ -49,6 +49,8 @@ public class CosmeticsSpawner : MonoBehaviour
                 players[i].transform.GetChild(0).transform.GetChild(j).gameObject.SetActive(false);
             }
             players[i].transform.GetChild(0).transform.GetChild(players[i].GetComponent<MainMenuPlayer>().selectedSkin).gameObject.SetActive(true);
+
+            players[i].GetComponent<MainMovement>().SetAnimator();
         }
     }
 }
