@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5f81d1d111e05fa4c9cb0a66d456d04e, type: 2}
     - target: {fileID: 919132149155446097, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
       propertyPath: m_Name
-      value: Vuurwerk2
+      value: P_Vuurwerk2
       objectReference: {fileID: 0}
     - target: {fileID: 7102206812633119750, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3156424386623144967}
+    - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6421715176304182170}
   m_SourcePrefab: {fileID: 100100000, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
 --- !u!1 &3228979058871591529 stripped
 GameObject:
@@ -106,3 +109,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &6402070346742964008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: ded68ec3620d5da4b89344e7ec9df410, type: 3}
+  m_PrefabInstance: {fileID: 2310006350714396472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6421715176304182170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402070346742964008}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3.4897158, z: 1.9999989}
+  m_Center: {x: 0, y: 1.7448579, z: 0}
