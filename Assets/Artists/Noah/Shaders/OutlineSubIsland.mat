@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline
+  m_Name: OutlineSubIsland
   m_Shader: {fileID: -6465566751694194690, guid: 48ac541bbba66614caf0150e81b4b48b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FadeDistance: 75
-    - _OutlineThickness: 0.005
+    - _OutlineThickness: 0.002
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WindHeight: 0.5
