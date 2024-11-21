@@ -23,10 +23,6 @@ public class MainMovement : MonoBehaviour
     {
         m_RB = GetComponent<Rigidbody>();
         playerAnimator = transform.GetChild(0).GetComponent<Animator>();
-        if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
-        {
-            skinAnimator = transform.GetChild(0).transform.GetChild(GetComponent<MainMenuPlayer>().selectedSkin).GetComponent<Animator>();
-        }
     }
 
     void Update()
@@ -52,6 +48,14 @@ public class MainMovement : MonoBehaviour
         if (stunTimer > 0)
         {
             stunTimer -= Time.deltaTime;
+        }
+    }
+
+    public void SetAnimator()
+    {
+        if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+        {
+            skinAnimator = transform.GetChild(0).transform.GetChild(GetComponent<MainMenuPlayer>().selectedSkin).GetComponent<Animator>();
         }
     }
 
