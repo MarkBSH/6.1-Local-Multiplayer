@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c876476b51b0f4aba3c4adf48da61e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -132
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c876476b51b0f4aba3c4adf48da61e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5861206
+      value: 94.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c876476b51b0f4aba3c4adf48da61e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -399
+      value: 129
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c876476b51b0f4aba3c4adf48da61e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 73b2fb0d64d8ee144b73ab199d0b049e, type: 2}
     - target: {fileID: 919132149155446097, guid: 70c876476b51b0f4aba3c4adf48da61e, type: 3}
       propertyPath: m_Name
-      value: SkyDisk
+      value: P_SkyDisk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
