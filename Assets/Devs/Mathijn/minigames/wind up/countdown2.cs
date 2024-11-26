@@ -51,5 +51,6 @@ public class Countdown2 : MonoBehaviour
         Animatorfinish.SetTrigger("hide");
         Animator.SetTrigger("effect");
         Windup.GameEctive = false;
+        Windup.gameStart();
     }
 }

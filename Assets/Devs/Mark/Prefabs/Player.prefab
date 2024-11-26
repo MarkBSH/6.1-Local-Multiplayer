@@ -320,11 +320,19 @@ MonoBehaviour:
     m_ActionId: 6d7c2750-1440-43b8-b25e-73c082a137fa
     m_ActionName: Player/Jump1[/Keyboard/space,/XInputControllerWindows1/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 40132286-2413-4ee8-bf94-04fa5dc72af4
-    m_ActionName: Player/TaserAttack[/Keyboard/e,/DualShock4GamepadHID/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7994791933618402769}
+        m_TargetAssemblyTypeName: WindUpInput, Assembly-CSharp
+        m_MethodName: WindUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d97544ae-3516-4dd2-9031-be990945d8bb
     m_ActionName: Player/WindUp[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0

@@ -6,6 +6,7 @@ public class Windup : MonoBehaviour
 {
     public int[] windUpPower = { 0, 0, 0, 0 };
     public bool GameEctive = true;
+    public Transform[] Transforms;
     public void windUp(int number)
     {
         windUpPower[number]++;
@@ -16,7 +17,7 @@ public class Windup : MonoBehaviour
     }
     public void addSore(int index)
     {
-        if (GameEctive) 
+        if (GameEctive == true) 
         {
             windUpPower[index]++;
         }

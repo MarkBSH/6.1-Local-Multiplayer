@@ -29,21 +29,13 @@ public class WindUpInput : MonoBehaviour
             if (gameController != null)
             {
                 windup = gameController.GetComponent<Windup>();
-                if (windup == null)
-                {
-                    Debug.LogError("Windup component not found on GameController!");
-                }
-            }
-            else
-            {
-                Debug.LogError("GameController object not found!");
             }
         }
     }
 
     public void WindUp(InputAction.CallbackContext _context)
     {
-        if (windup != null)
+        if (windup != null && _context.performed)
         {
             windup.addSore(MainMenuPlayer.playerNum);
         }
