@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7455730769088410580}
   - component: {fileID: 8395056830539851017}
   - component: {fileID: 7240048798258321736}
+  - component: {fileID: 7994791933618402769}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
   - component: {fileID: -3125204758730741984}
@@ -318,11 +319,33 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6d7c2750-1440-43b8-b25e-73c082a137fa
     m_ActionName: Player/Jump1[/Keyboard/space,/XInputControllerWindows1/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40132286-2413-4ee8-bf94-04fa5dc72af4
+    m_ActionName: Player/TaserAttack[/Keyboard/e,/DualShock4GamepadHID/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d97544ae-3516-4dd2-9031-be990945d8bb
+    m_ActionName: Player/WindUp[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7994791933618402769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7041a386c642842a6c5cbe0e7baba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windup: {fileID: 0}
+  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!54 &3075019885273128618
 Rigidbody:
   m_ObjectHideFlags: 0
