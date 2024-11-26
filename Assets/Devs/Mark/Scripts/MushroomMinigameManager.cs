@@ -58,14 +58,7 @@ public class MushroomMinigameManager : MonoBehaviour
 
     IEnumerator EndMoment()
     {
-        yield return new WaitForSeconds(1);
-
-        for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
-        {
-            CosmeticsSpawner.Instance.players[i].SetActive(true);
-        }        
-
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene("MarkMain");
     }

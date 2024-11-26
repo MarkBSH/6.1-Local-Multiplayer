@@ -53,4 +53,12 @@ public class CosmeticsSpawner : MonoBehaviour
             players[i].GetComponent<MainMovement>().SetAnimator();
         }
     }
+
+    public void ActivatePlayers()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].SetActive(true);
+        }
+    }
 }
