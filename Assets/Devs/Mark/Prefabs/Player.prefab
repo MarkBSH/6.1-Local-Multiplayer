@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7455730769088410580}
   - component: {fileID: 8395056830539851017}
   - component: {fileID: 526740809262842143}
+  - component: {fileID: 7427533904912019421}
   - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
@@ -141,6 +142,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taserObject: {fileID: 4883304412236708174, guid: 87b9626596bfe01449055139c2b4d189, type: 3}
   attackCooldown: 3
+--- !u!114 &7427533904912019421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7041a386c642842a6c5cbe0e7baba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +332,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 40132286-2413-4ee8-bf94-04fa5dc72af4
     m_ActionName: Player/TaserAttack[/Keyboard/e,/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7427533904912019421}
+        m_TargetAssemblyTypeName: WindUpInput, Assembly-CSharp
+        m_MethodName: WindUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d97544ae-3516-4dd2-9031-be990945d8bb
+    m_ActionName: Player/WindUp
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

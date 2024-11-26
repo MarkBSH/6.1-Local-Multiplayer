@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Windup : MonoBehaviour
 {
-    public int[] windUpPower = { 1, 1, 1, 1 };
+    public int[] windUpPower = { 0, 0, 0, 0 };
+    public bool GameEctive = true;
     public void windUp(int number)
     {
         windUpPower[number]++;
@@ -12,5 +13,12 @@ public class Windup : MonoBehaviour
     public void gameStart()
     {
 
+    }
+    public void addSore(int index)
+    {
+        if (GameEctive) 
+        {
+            windUpPower[index]++;
+        }
     }
 }
