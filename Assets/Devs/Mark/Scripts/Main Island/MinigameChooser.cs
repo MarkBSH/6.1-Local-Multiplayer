@@ -34,7 +34,8 @@ public class MinigameChooser : MonoBehaviour
     GameObject choosingPanel; //< gameobject with the panels for choosing the game
     [SerializeField] Animator chooseAnimation; //< an animator for the choose animation
     bool canStartCooldown = true; //< a bool to not interupt the coroutine
-    Coroutine co; //< to be able to stop the coroutine 
+    Coroutine co; //< to be able to stop the coroutine
+    bool hasSaved = false;
 
     void Awake()
     {
@@ -66,7 +67,7 @@ public class MinigameChooser : MonoBehaviour
             {
                 countdownText.SetActive(false);
                 canStartCooldown = true;
-                if (co != null)
+                if (co != null && hasSaved == false)
                 {
                     StopCoroutine(co);
                 }
@@ -98,6 +99,7 @@ public class MinigameChooser : MonoBehaviour
 
     IEnumerator CyclePlayers()
     {
+        hasSaved = true;
         countdownText.SetActive(false);
         //confirms the games so if someone goes off the button it's still these mingames
         string[] confirmedGames = chosenGames;
