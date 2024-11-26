@@ -750,6 +750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterParticals: {fileID: 2994277504573196161, guid: fb4ead9e4ced0cd48a18ecbea4fb8753, type: 3}
+  taserObj: {fileID: 5132466980991042941, guid: a069785b019b4d4478aa6db312648a7d, type: 3}
+  taserObjects: []
 --- !u!1001 &714650195
 PrefabInstance:
   m_ObjectHideFlags: 0

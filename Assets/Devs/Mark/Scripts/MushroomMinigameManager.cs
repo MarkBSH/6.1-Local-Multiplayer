@@ -63,7 +63,7 @@ public class MushroomMinigameManager : MonoBehaviour
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
             CosmeticsSpawner.Instance.players[i].SetActive(true);
-        }
+        }        
 
         yield return new WaitForSeconds(1);
 
