@@ -58,15 +58,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "TaserAttack",
-                    "type": "Button",
-                    "id": "40132286-2413-4ee8-bf94-04fa5dc72af4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -375,28 +366,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "ReadyUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "232de788-21e6-4b5c-b027-567298a5c99c",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TaserAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f969db53-fbe3-43ec-aea5-fa558a05f3ad",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TaserAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

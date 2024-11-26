@@ -23,7 +23,6 @@ public class whoIsAlive : MonoBehaviour
             players[i].GetComponent<MainMovement>().jumpForce = 400;
             players[i].GetComponent<MainMovement>().movementMax = 6;
             players[i].GetComponent<PlayerHitScript>().hitEvent.AddListener(() => player(players[i])); 
-            players[i].GetComponent<TaserAttack>().enabled = false;
 
             playersAlive[i] = players[i];
         }
