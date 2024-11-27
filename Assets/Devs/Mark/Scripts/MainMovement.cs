@@ -8,7 +8,7 @@ public class MainMovement : MonoBehaviour
 {
     Rigidbody m_RB; //< rigidbody of the player
     Animator playerAnimator; //< animator of the player
-    Animator skinAnimator; //< animator of the skin
+    public Animator skinAnimator; //< animator of the skin
     Vector2 moveDir; //< the directon of where the player is going
     public float movementSpeed; //< the speed of the player
     public float movementMax; //< the maximum speed of the player

@@ -2,7 +2,7 @@
     "name": "PlayerMain",
     "maps": [
         {
-            "name": "Player",
+            "name": "Main",
             "id": "55e46337-afd6-4136-89e2-758ed9420440",
             "actions": [
                 {
@@ -913,6 +913,138 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Fireworks",
+            "id": "fb044ef3-6977-438d-8f54-525e01725ec9",
+            "actions": [
+                {
+                    "name": "Firework1",
+                    "type": "Button",
+                    "id": "e2d8da0a-7916-47f7-a7fa-ad87e89901e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Firework2",
+                    "type": "Button",
+                    "id": "d87d8f56-3241-4706-9419-06e80f658148",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Firework3",
+                    "type": "Button",
+                    "id": "c29bcfd6-2029-4949-9fd0-2128ea53ffe4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Firework4",
+                    "type": "Button",
+                    "id": "dcdca8dd-cab0-4001-b476-a679a8dbf1a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fd8a8907-0f5f-49de-8d6e-09b8cd203767",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "583d283e-d0f8-42c7-98e7-f04ef46038fa",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3225cc67-3d54-4229-99ad-8f0d2de17e32",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "485020ba-a49a-450d-a89d-c60d3cf66604",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "466e4fd0-4e23-418a-a48e-771241b12b84",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da22879c-6561-4a30-868f-7521c2e60eb0",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "647f2e4d-1643-4a53-bec5-b580e9e6e743",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90c1dfaf-7486-458f-8c3f-b39bc776fc40",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Firework4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

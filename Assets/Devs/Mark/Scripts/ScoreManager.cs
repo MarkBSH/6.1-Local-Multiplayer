@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -39,7 +40,17 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MarkMain")
+        {
+            FindAndSetTexts();
+        }
+    }
+
 
     //adds points to a player depending on who wins
     public void AddPoints(string winner)

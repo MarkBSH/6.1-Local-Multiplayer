@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7455730769088410580}
   - component: {fileID: 8395056830539851017}
   - component: {fileID: 7994791933618402769}
+  - component: {fileID: 4728868035573010528}
   - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2c0927cc0bb33499235398a6e0bea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinAnimator: {fileID: 0}
   movementSpeed: 20
   movementMax: 10
   jumpForce: 250
@@ -171,6 +173,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windup: {fileID: 0}
   MainMenuPlayer: {fileID: 9213652186116492127}
+--- !u!114 &4728868035573010528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6069fb762de74b04db1160209fd8b765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWalking: 0
+  endLocations:
+  - {x: -5, y: 1.7, z: -2}
+  - {x: -1.8, y: 1.7, z: -2}
+  - {x: 1.8, y: 1.7, z: -2}
+  - {x: 5, y: 1.7, z: -2}
+  chosenFirework: 0
+  hasChosen: 0
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,9 +370,73 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d97544ae-3516-4dd2-9031-be990945d8bb
     m_ActionName: Player/WindUp[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4728868035573010528}
+        m_TargetAssemblyTypeName: PlayerFirework, Assembly-CSharp
+        m_MethodName: ChooseFirework1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e2d8da0a-7916-47f7-a7fa-ad87e89901e9
+    m_ActionName: Fireworks/Firework1[/Keyboard/z,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4728868035573010528}
+        m_TargetAssemblyTypeName: PlayerFirework, Assembly-CSharp
+        m_MethodName: ChooseFirework2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d87d8f56-3241-4706-9419-06e80f658148
+    m_ActionName: Fireworks/Firework2[/Keyboard/x,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4728868035573010528}
+        m_TargetAssemblyTypeName: PlayerFirework, Assembly-CSharp
+        m_MethodName: ChooseFirework3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c29bcfd6-2029-4949-9fd0-2128ea53ffe4
+    m_ActionName: Fireworks/Firework3[/Keyboard/c,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4728868035573010528}
+        m_TargetAssemblyTypeName: PlayerFirework, Assembly-CSharp
+        m_MethodName: ChooseFirework4
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dcdca8dd-cab0-4001-b476-a679a8dbf1a7
+    m_ActionName: Fireworks/Firework4[/Keyboard/v,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!54 &3075019885273128618
