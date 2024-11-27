@@ -17,7 +17,7 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 942
+    x: 941
     y: -154
     width: 2204
     height: 3249
@@ -1523,7 +1523,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.0,"y":-9.8100004196167,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":0.0,"y":-2.0,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: Force
@@ -4521,7 +4521,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614714}
   - {fileID: 8926484042661614716}
   dataType: 0
-  capacity: 1000
+  capacity: 2000
   stripCapacity: 1
   particlePerStripCount: 128
   needsComputeBounds: 0
