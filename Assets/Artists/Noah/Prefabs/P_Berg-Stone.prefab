@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2f0c38f74904f354f875fc4546649cc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -142.61534
+      value: 31.419254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f0c38f74904f354f875fc4546649cc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 86.19615
+      value: -2.5861359
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f0c38f74904f354f875fc4546649cc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.554707
+      value: -5.752602
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f0c38f74904f354f875fc4546649cc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 408e7d57b4a695c4d86884afec55251c, type: 2}
     - target: {fileID: 919132149155446097, guid: 2f0c38f74904f354f875fc4546649cc1, type: 3}
       propertyPath: m_Name
-      value: Berg-Stone
+      value: P_Berg-Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
