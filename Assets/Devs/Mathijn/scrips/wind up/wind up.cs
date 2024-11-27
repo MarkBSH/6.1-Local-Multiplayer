@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -48,7 +49,28 @@ public class Windup : MonoBehaviour
     private IEnumerator waitandendmylife()
     {
         yield return new WaitForSeconds(1.5f);
-        ScoreManager.Instance.AddPoints("P3");
+        for (int i = 0; i < windUpPower.Length; i++)
+        {
+            if (windUpPower[i] == windUpPower.Max())
+            {
+                switch (i) 
+                {
+                    case 0:
+                        ScoreManager.Instance.AddPoints("P1");
+                        break;
+                    case 1:
+                        ScoreManager.Instance.AddPoints("P2");
+                        break;
+                    case 2:
+                        ScoreManager.Instance.AddPoints("P3");
+                        break;
+                    case 3:
+                        ScoreManager.Instance.AddPoints("P4");
+                        break;
+                }
+            }
+        }
+        
         SceneManager.LoadScene("MarkMain");
 
     }

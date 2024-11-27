@@ -14,11 +14,15 @@ public class Countdown2 : MonoBehaviour
     [SerializeField] private Animator Animator;
     [SerializeField] private Animator Animatorfinish;
     [SerializeField] private Windup Windup;
+    GameObject[] players;
     void Start()
     {
-        Windup.GameActive = false;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
+        {
+            players[i].GetComponent<WindUpInput>().enabled = true;
+        }
         StartCoroutine(StartCountdown2());
-
     }
     IEnumerator StartCountdown2() 
     {
