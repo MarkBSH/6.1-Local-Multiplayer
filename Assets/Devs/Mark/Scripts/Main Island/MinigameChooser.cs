@@ -101,16 +101,16 @@ public class MinigameChooser : MonoBehaviour
     {
         hasSaved = true;
         countdownText.SetActive(false);
-        //confirms the games so if someone goes off the button it's still these mingames
-        string[] confirmedGames = chosenGames;
         //randomly choosing the minigame
         int tempChosenPlayer = Random.Range(0, games.Length);
+        //confirms the games so if someone goes off the button it's still these mingames
+        string confirmedGame = chosenGames[tempChosenPlayer];
         //showing an animation for who wins
         string tempChosenAnimation = "Player " + (tempChosenPlayer + 1);
         choosingPanel.SetActive(true);
         chooseAnimation.SetTrigger(tempChosenAnimation);
         yield return new WaitForSeconds(5);
         //loading the scene of the chosen minigame
-        SceneManager.LoadScene(confirmedGames[tempChosenPlayer]);
+        SceneManager.LoadScene(confirmedGame);
     }
 }

@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 9213652186116492127}
   - component: {fileID: 7455730769088410580}
   - component: {fileID: 8395056830539851017}
-  - component: {fileID: 7240048798258321736}
   - component: {fileID: 7994791933618402769}
+  - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
   - component: {fileID: -3125204758730741984}
@@ -101,7 +101,6 @@ MonoBehaviour:
   movementSpeed: 20
   movementMax: 10
   jumpForce: 250
-  stunTimer: 0
 --- !u!114 &9213652186116492127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +157,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTimer: 1
   deathParticals: {fileID: 9157549960958748663, guid: c8c757602d29da84abf3b5c2b03dfffc, type: 3}
+--- !u!114 &7994791933618402769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7041a386c642842a6c5cbe0e7baba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windup: {fileID: 0}
+  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,20 +353,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7994791933618402769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4441819148865368702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7041a386c642842a6c5cbe0e7baba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windup: {fileID: 0}
-  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!54 &3075019885273128618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -401,7 +400,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Height: 4.6
+  m_Height: 4.7
   m_Direction: 1
   m_Center: {x: 0, y: 1.8, z: 0}
 --- !u!65 &-3125204758730741984

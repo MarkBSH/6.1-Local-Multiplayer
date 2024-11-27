@@ -27,13 +27,13 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    int P1Score; //< player 1 score
+    int P1Score = 0; //< player 1 score
     TextMeshProUGUI P1Text; //< player 1 score text
-    int P2Score; //< player 2 score
+    int P2Score = 0; //< player 2 score
     TextMeshProUGUI P2Text; //< player 2 score text
-    int P3Score; //< player 3 score
+    int P3Score = 0; //< player 3 score
     TextMeshProUGUI P3Text; //< player 3 score text
-    int P4Score; //< player 4 score
+    int P4Score = 0; //< player 4 score
     TextMeshProUGUI P4Text; //< player 4 score text
 
     void Start()
@@ -41,6 +41,7 @@ public class ScoreManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    //adds points to a player depending on who wins
     public void AddPoints(string winner)
     {
         switch (winner)
