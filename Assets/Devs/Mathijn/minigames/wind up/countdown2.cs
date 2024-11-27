@@ -16,6 +16,7 @@ public class Countdown2 : MonoBehaviour
     [SerializeField] private Windup Windup;
     void Start()
     {
+        Windup.GameActive = false;
         StartCoroutine(StartCountdown2());
 
     }
@@ -27,7 +28,8 @@ public class Countdown2 : MonoBehaviour
             yield return new WaitForSeconds(1f);
             _textMeshPro2.text = timerstart.ToString();
         }
-        Windup.GameEctive = true;
+        _textMeshPro2.text = "";
+        Windup.GameActive = true;
         StartCoroutine(StartCountdown());
     }
     IEnumerator StartCountdown()
@@ -48,9 +50,8 @@ public class Countdown2 : MonoBehaviour
             }
         }
         _textMeshPro.text = "0";
-        Animatorfinish.SetTrigger("hide");
         Animator.SetTrigger("effect");
-        Windup.GameEctive = false;
+        Windup.GameActive = false;
         Windup.gameStart();
     }
 }

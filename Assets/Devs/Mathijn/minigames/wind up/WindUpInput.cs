@@ -36,7 +36,7 @@ public class WindUpInput : MonoBehaviour
     {
         if (windup != null && _context.performed)
         {
-            windup.addSore(MainMenuPlayer.playerNum);
+            windup.addScore(MainMenuPlayer.playerNum);
         }
     }
 }
