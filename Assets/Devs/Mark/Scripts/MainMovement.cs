@@ -13,7 +13,7 @@ public class MainMovement : MonoBehaviour
     public float movementSpeed; //< the speed of the player
     public float movementMax; //< the maximum speed of the player
     public float jumpForce; //< the jumpforce of the player
-    bool canJump; //< check for if the player can jump
+    public bool canJump; //< check for if the player can jump
     float jumpCooldown = 0.2f; //< a cooldown for the jumping for no continuus jumping
     float jumpTimer = 0; //< a float variable for ^
 

@@ -34,6 +34,17 @@ public class FireworkMinigameManager : MonoBehaviour
     int chosenWinner;
     bool hasEnded = false;
 
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        chosenFirework = new int[4];
+        hasEnded = false;
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].GetComponent<PlayerFirework>().ResetStats();
+        }
+    }
+
     void Update()
     {
         int totalChosenFireworks = 0;
@@ -75,7 +86,7 @@ public class FireworkMinigameManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(8);
 
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 

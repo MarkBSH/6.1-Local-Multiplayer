@@ -15,7 +15,13 @@ public class CountdownManager : MonoBehaviour
     [SerializeField] Animator animatorFinish; //< animator for finnish effect
 
     //coroutine starter
+
     void Start()
+    {
+        StartCoroutine(Countdown());
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine(Countdown());
     }
