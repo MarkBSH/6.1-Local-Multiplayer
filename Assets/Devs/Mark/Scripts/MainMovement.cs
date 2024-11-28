@@ -60,6 +60,7 @@ public class MainMovement : MonoBehaviour
         moveDir = _context.ReadValue<Vector2>();
         if (_context.performed)
         {
+            Debug.Log("kancdvv");
             playerAnimator.SetBool("Move", true);
             if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
             {
@@ -91,7 +92,7 @@ public class MainMovement : MonoBehaviour
         }
     }
     //if the player is on the groud you can jump
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         canJump = true;
     }

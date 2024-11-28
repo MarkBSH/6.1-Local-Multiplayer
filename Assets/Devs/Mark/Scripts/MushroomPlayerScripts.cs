@@ -16,6 +16,7 @@ public class MushroomPlayerScripts : MonoBehaviour
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
+            SceneManager.sceneLoaded += OnSceneLoaded;
             players[i].GetComponent<MainMovement>().enabled = true;
             players[i].GetComponent<MainMovement>().movementSpeed = 26;
             players[i].GetComponent<MainMovement>().jumpForce = 700;

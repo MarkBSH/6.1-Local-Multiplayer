@@ -17,6 +17,7 @@ public class MushroomMinigameManager : MonoBehaviour
     {
         //getting all musroom platforms in the scene
         mushroomPlatforms = GameObject.FindGameObjectsWithTag("MushroomPlatform");
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

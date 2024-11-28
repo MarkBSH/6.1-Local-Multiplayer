@@ -17,6 +17,7 @@ public class FireworkPlayerScripts : MonoBehaviour
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
+            SceneManager.sceneLoaded += OnSceneLoaded;
             playerInput[i] = players[i].GetComponent<PlayerInput>();
             playerInput[i].SwitchCurrentActionMap("Fireworks");
             players[i].GetComponent<MainMovement>().enabled = false;

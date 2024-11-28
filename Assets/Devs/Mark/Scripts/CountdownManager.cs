@@ -19,6 +19,7 @@ public class CountdownManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(Countdown());
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

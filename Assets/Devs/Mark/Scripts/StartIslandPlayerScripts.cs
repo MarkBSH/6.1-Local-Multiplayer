@@ -17,6 +17,7 @@ public class StartIslandPlayerScripts : MonoBehaviour
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
+            SceneManager.sceneLoaded += OnSceneLoaded;
             playerInput[i] = players[i].GetComponent<PlayerInput>();
             playerInput[i].SwitchCurrentActionMap("Main");
             players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
@@ -40,7 +41,6 @@ public class StartIslandPlayerScripts : MonoBehaviour
             playerInput[i].SwitchCurrentActionMap("Main");
             players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
             players[i].GetComponent<MainMovement>().enabled = true;
-            players[i].GetComponent<MainMovement>().canJump = false;
             players[i].GetComponent<MainMovement>().movementSpeed = 24;
             players[i].GetComponent<MainMovement>().jumpForce = 650;
             players[i].GetComponent<MainMovement>().movementMax = 10;

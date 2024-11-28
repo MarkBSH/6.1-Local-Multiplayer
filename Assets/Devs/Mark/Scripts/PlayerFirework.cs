@@ -29,7 +29,7 @@ public class PlayerFirework : MonoBehaviour
 
     void Update()
     {
-        if (startWalking)
+        if (startWalking && SceneManager.GetActiveScene().name == "FireworkMinigame")
         {
             if (walkTimer > 1)
             {
