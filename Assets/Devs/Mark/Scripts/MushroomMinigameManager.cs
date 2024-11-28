@@ -8,7 +8,7 @@ public class MushroomMinigameManager : MonoBehaviour
     GameObject[] mushroomPlatforms; //< list of the mushroom platforms
     public GameObject[] players; //< list of players
 
-    [SerializeField] float mushroomSpeed = 50; //< the speed of how fast the mushrooms go down
+    [SerializeField] float mushroomSpeed = 10; //< the speed of how fast the mushrooms go down
     [SerializeField] float goDownCooldown = 3; //< the 'cooldown' for the mushrooms to go down
     float goDownTimer = -3; //< extra time at the start before the mushrooms go down
     bool canGiveScore = true; //< check for no multiple end sequences
@@ -17,6 +17,14 @@ public class MushroomMinigameManager : MonoBehaviour
     {
         //getting all musroom platforms in the scene
         mushroomPlatforms = GameObject.FindGameObjectsWithTag("MushroomPlatform");
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mushroomSpeed = 10;
+        goDownCooldown = 3;
+        goDownTimer = -3;
+        canGiveScore = true;
     }
 
     void Update()
