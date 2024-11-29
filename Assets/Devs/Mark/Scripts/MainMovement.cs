@@ -13,7 +13,7 @@ public class MainMovement : MonoBehaviour
     public float movementSpeed; //< the speed of the player
     public float movementMax; //< the maximum speed of the player
     public float jumpForce; //< the jumpforce of the player
-    bool canJump; //< check for if the player can jump
+    public bool canJump; //< check for if the player can jump
     float jumpCooldown = 0.2f; //< a cooldown for the jumping for no continuus jumping
     float jumpTimer = 0; //< a float variable for ^
 
@@ -60,6 +60,7 @@ public class MainMovement : MonoBehaviour
         moveDir = _context.ReadValue<Vector2>();
         if (_context.performed)
         {
+            Debug.Log("kancdvv");
             playerAnimator.SetBool("Move", true);
             if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
             {
@@ -91,7 +92,7 @@ public class MainMovement : MonoBehaviour
         }
     }
     //if the player is on the groud you can jump
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         canJump = true;
     }

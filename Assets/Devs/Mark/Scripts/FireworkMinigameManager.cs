@@ -27,12 +27,30 @@ public class FireworkMinigameManager : MonoBehaviour
         }
     }
 
-
+    GameObject[] players;
     public int[] chosenFirework = new int[4];
     [SerializeField] GameObject[] fireworks;
     [SerializeField] GameObject[] fireworkPlacements;
     int chosenWinner;
     bool hasEnded = false;
+
+    void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        players = GameObject.FindGameObjectsWithTag("Player");
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        chosenFirework = new int[4];
+        hasEnded = false;
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].GetComponent<PlayerFirework>().ResetStats();
+        }
+    }
 
     void Update()
     {
@@ -58,7 +76,10 @@ public class FireworkMinigameManager : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        CamZoomToWinner.Instance.CamLookUp();
+
+        yield return new WaitForSeconds(1f);
+
         for (int i = 0; i < chosenFirework.Length; i++)
         {
             if (chosenFirework[i] != 0)
@@ -75,9 +96,11 @@ public class FireworkMinigameManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
 
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        CamZoomToWinner.Instance.StartZooming(players[chosenFirework[chosenWinner] - 1]);
+
+        yield return new WaitForSeconds(4);
 
         switch (players[chosenFirework[chosenWinner] - 1].GetComponent<MainMenuPlayer>().playerNum)
         {

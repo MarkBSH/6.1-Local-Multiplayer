@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerFirework : MonoBehaviour
 {
@@ -11,17 +12,24 @@ public class PlayerFirework : MonoBehaviour
     Vector3 startLocation;
     [SerializeField] Vector3[] endLocations;
     float walkTimer;
-    [SerializeField] int chosenFirework;
-    [SerializeField] bool hasChosen = false;
+    int chosenFirework;
+    bool hasChosen = false;
 
     void Start()
     {
         playerAnimator = transform.GetChild(0).GetComponent<Animator>();
     }
 
+    public void ResetStats()
+    {
+        startWalking = false;
+        walkTimer = 0;
+        hasChosen = false;
+    }
+
     void Update()
     {
-        if (startWalking)
+        if (startWalking && SceneManager.GetActiveScene().name == "FireworkMinigame")
         {
             if (walkTimer > 1)
             {
