@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class whoIsAlive : MonoBehaviour
 {
@@ -38,6 +40,24 @@ public class whoIsAlive : MonoBehaviour
         if (numberOfAlivePlayers == 1)
         {
             Debug.Log("One player left!");
+            MainMenuPlayer player = playersAlive[0].GetComponent<MainMenuPlayer>();
+            int number = player.playerNum;
+            switch (number)
+            {
+                case 0:
+                    ScoreManager.Instance.AddPoints("P1");
+                    break;
+                case 1:
+                    ScoreManager.Instance.AddPoints("P2");
+                    break;
+                case 2:
+                    ScoreManager.Instance.AddPoints("P3");
+                    break;
+                case 3:
+                    ScoreManager.Instance.AddPoints("P4");
+                    break;
+            }
+            SceneManager.LoadScene("MarkMain");
         }
     }
 
