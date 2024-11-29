@@ -33,12 +33,14 @@ public class FireworkMinigameManager : MonoBehaviour
     [SerializeField] GameObject[] fireworkPlacements;
     int chosenWinner;
     bool hasEnded = false;
+    GameObject canvas;
 
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         players = GameObject.FindGameObjectsWithTag("Player");
+        canvas = GameObject.Find("canvas");
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -77,6 +79,8 @@ public class FireworkMinigameManager : MonoBehaviour
     IEnumerator EndGame()
     {
         CamZoomToWinner.Instance.CamLookUp();
+
+        canvas.SetActive(false);
 
         yield return new WaitForSeconds(1f);
 
