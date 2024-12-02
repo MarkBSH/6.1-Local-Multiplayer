@@ -23,5 +23,16 @@ public class coinspickup : MonoBehaviour
             }
         }
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "coin")
+        {
+            coimmager.addcoins(MainMenuPlayer.playerNum, 1);
+            Destroy(collision.gameObject);
+        } else if (collision.collider.tag == "coins2")
+        {
+            coimmager.addcoins(MainMenuPlayer.playerNum, 3);
+            Destroy(collision.gameObject);
+        }
+    }
 }
