@@ -1905,6 +1905,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7421532
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.087236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.066257
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13967723
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.17708607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7633093
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.60538393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 76.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048514839580295929, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 26.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.457426
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.061834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -32.297836
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.011542797
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.01701969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7154079
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.69840443
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 163.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132134251320589869, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 340.989
+      objectReference: {fileID: 0}
     - target: {fileID: 8873948076199657566, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Name
       value: V5_BeachIsland
