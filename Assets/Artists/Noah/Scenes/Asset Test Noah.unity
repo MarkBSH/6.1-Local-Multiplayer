@@ -1905,6 +1905,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: MaxDistance
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: MinDistance
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8873948076199657566, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Name
       value: V5_BeachIsland
@@ -3332,6 +3340,18 @@ PrefabInstance:
     - target: {fileID: 4332875890627860554, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_Name
       value: island
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
+      propertyPath: MaxDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
+      propertyPath: MinDistance
+      value: 89
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6772,6 +6792,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: MaxDistance
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: MinDistance
+      value: 66
+      objectReference: {fileID: 0}
     - target: {fileID: 1579435077344290673, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_Name
       value: Island1
