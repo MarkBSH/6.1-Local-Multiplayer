@@ -1905,26 +1905,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
-      propertyPath: MaxDistance
-      value: 48.973785
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
-      propertyPath: MinDistance
-      value: 48.973785
-      objectReference: {fileID: 0}
     - target: {fileID: 8873948076199657566, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Name
       value: V5_BeachIsland
