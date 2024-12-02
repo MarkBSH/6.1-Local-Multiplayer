@@ -6792,14 +6792,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
-      propertyPath: MaxDistance
-      value: 78
-      objectReference: {fileID: 0}
-    - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
-      propertyPath: MinDistance
-      value: 66
-      objectReference: {fileID: 0}
     - target: {fileID: 1579435077344290673, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_Name
       value: Island1
