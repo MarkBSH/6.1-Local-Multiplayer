@@ -1905,6 +1905,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: MaxDistance
+      value: 48.973785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: MinDistance
+      value: 48.973785
+      objectReference: {fileID: 0}
     - target: {fileID: 8873948076199657566, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Name
       value: V5_BeachIsland
@@ -7075,11 +7095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: MaxDistance
-      value: 142.38087
+      value: 192.92477
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: MinDistance
-      value: 127.58539
+      value: 157.9197
       objectReference: {fileID: 0}
     - target: {fileID: 1579435077344290673, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_Name
@@ -7131,11 +7151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5419380780096010175, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.9
+      value: 66.6
       objectReference: {fileID: 0}
     - target: {fileID: 5419380780096010175, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -67
+      value: -71.6
       objectReference: {fileID: 0}
     - target: {fileID: 9045993349511767369, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_LocalPosition.y
