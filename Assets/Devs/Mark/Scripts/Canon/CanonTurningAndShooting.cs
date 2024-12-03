@@ -31,7 +31,6 @@ public class CanonTurningAndShooting : MonoBehaviour
     // Coroutine to handle shooting
     public IEnumerator Shoot()
     {
-        Debug.Log("Shooting");
         if (shotTimer > shotCooldown)
         {
             turnSpeed = 0;

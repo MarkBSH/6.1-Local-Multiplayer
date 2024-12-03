@@ -48,11 +48,12 @@ GameObject:
   - component: {fileID: 7994791933618402769}
   - component: {fileID: 4728868035573010528}
   - component: {fileID: 4906265903562467529}
+  - component: {fileID: 5715270277051491871}
+  - component: {fileID: 4196440799220965346}
   - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
   - component: {fileID: -3125204758730741984}
-  - component: {fileID: 4196440799220965346}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -206,6 +207,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9be3e93a6d2d8489d767d0af0e0fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5715270277051491871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ca097a1ac08a0438c82aa899788a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &4196440799220965346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dfca846025fa734795c18d1a3263723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coimmager: {fileID: 0}
+  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +491,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8e0cdf40-2c3e-4577-b3a6-d98071f175bc
     m_ActionName: Canon/Attack[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5715270277051491871}
+        m_TargetAssemblyTypeName: UnderWaterMovement, Assembly-CSharp
+        m_MethodName: GetMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07212c9c-c027-4cef-bbc1-44e37910f780
+    m_ActionName: UnderWater/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -539,20 +583,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.5, z: 0.3}
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!114 &4196440799220965346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4441819148865368702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dfca846025fa734795c18d1a3263723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coimmager: {fileID: 0}
-  MainMenuPlayer: {fileID: 9213652186116492127}
 --- !u!1 &7360923178889711102
 GameObject:
   m_ObjectHideFlags: 0

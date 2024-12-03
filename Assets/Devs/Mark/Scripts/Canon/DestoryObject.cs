@@ -14,7 +14,6 @@ public class DestoryObject : MonoBehaviour
     // This function is called when the collider other enters the collision
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision detected with " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             // Destroy the game object immediately upon collision

@@ -9,6 +9,11 @@ public class MainMenuPlayer : MonoBehaviour
     public int playerNum; // The player's number
     public int selectedSkin = 0; // Index of the selected skin
 
+    public int PlayerNum
+    {
+        get { return playerNum; }
+    }
+
     Vector2 moveDir; // Direction for moving the skin preview
 
     void Start()

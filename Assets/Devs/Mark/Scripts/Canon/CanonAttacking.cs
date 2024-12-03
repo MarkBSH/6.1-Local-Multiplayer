@@ -9,7 +9,6 @@ public class CanonAttacking : MonoBehaviour
     {
         if (_context.performed)
         {
-            Debug.Log("Attacking");
             // Initiate shooting action
             StartCoroutine(
                 CanonGamemanager.Instance.canonHealths[

@@ -99,7 +99,7 @@ Transform:
   m_GameObject: {fileID: 5330922188436760954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.6, y: 51.7, z: 7.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,7 +117,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c25ccde57e9c8144ab02ec6efffa90a0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -125,8 +125,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 48.973785
-  MaxDistance: 48.973785
+  MinDistance: 1
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -161,7 +161,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -302,7 +302,6 @@ Transform:
   - {fileID: 8664326207628752481}
   - {fileID: 7817082615473950995}
   - {fileID: 6853453674350210488}
-  - {fileID: 7144201636342555088}
   - {fileID: 350341662936429498}
   - {fileID: 3446885159913181192}
   - {fileID: 5317651904172529977}
@@ -316,6 +315,7 @@ Transform:
   - {fileID: 8132134251320589869}
   - {fileID: 7048514839580295929}
   - {fileID: 8513776848050719592}
+  - {fileID: 7144201636342555088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 127.779, z: 0}
 --- !u!33 &1845971014330065158
@@ -2550,7 +2550,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1265051017852259617, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
       propertyPath: m_Name
-      value: P_Ring (1)
+      value: UnderWaterMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265051017852259617, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
+      propertyPath: m_TagString
+      value: MinigamePad
       objectReference: {fileID: 0}
     - target: {fileID: 1929103725803394971, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
       propertyPath: m_LocalScale.x
@@ -2615,13 +2619,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1265051017852259617, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8097015035150663391}
   m_SourcePrefab: {fileID: 100100000, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
 --- !u!4 &527441700827927730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1929103725803394971, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
   m_PrefabInstance: {fileID: 2131421915954758441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &872020207401684488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1265051017852259617, guid: 1e490a70f7446154b8e42d897a3b3065, type: 3}
+  m_PrefabInstance: {fileID: 2131421915954758441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &8097015035150663391
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872020207401684488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.95
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2240356398180712070
 PrefabInstance:
   m_ObjectHideFlags: 0

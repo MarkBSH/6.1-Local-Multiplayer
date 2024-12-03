@@ -12,7 +12,9 @@ public class CanonGamemanager : MonoBehaviour
         {
             if (m_Instance == null)
             {
-                m_Instance = FindObjectOfType<CanonGamemanager>();
+                GameObject _obj = new();
+                _obj.name = typeof(CanonGamemanager).Name;
+                m_Instance = _obj.AddComponent<CanonGamemanager>();
             }
             return m_Instance;
         }
@@ -25,11 +27,13 @@ public class CanonGamemanager : MonoBehaviour
     {
         canonHealths = new List<CanonHealth>(FindObjectsOfType<CanonHealth>());
         canonHealths.Reverse(); // Reverse the order of the obtained canon healths
-    }
 
-    void Update()
-    {
-        // Game logic updates can be added here
+        int activePlayerCount = CosmeticsSpawner.Instance.spawningPlayers;
+        for (int i = canonHealths.Count - 1; i >= activePlayerCount; i--)
+        {
+            Destroy(canonHealths[i].gameObject);
+            canonHealths.RemoveAt(i);
+        }
     }
 
     public IEnumerator OnHealthChanged()
