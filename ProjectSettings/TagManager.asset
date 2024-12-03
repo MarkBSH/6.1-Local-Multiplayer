@@ -10,6 +10,7 @@ TagManager:
   - DeathHitbox
   - coin
   - coins2
+  - CanonHit
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Floor
   - MaskLayer
   - SeeThrough
-  - 
-  - 
+  - CanonPlayer
+  - CanonHit
   - 
   - 
   - 

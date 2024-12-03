@@ -6,22 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerFirework : MonoBehaviour
 {
-    Animator playerAnimator; //< animator of the player
+    Animator playerAnimator; // Animator component for the player
 
-    [SerializeField] bool startWalking = false;
-    Vector3 startLocation;
-    [SerializeField] Vector3[] endLocations;
-    float walkTimer;
-    int chosenFirework;
-    bool hasChosen = false;
+    [SerializeField] bool startWalking = false; // Indicates if the player should start walking
+    Vector3 startLocation; // Starting position of the player
+    [SerializeField] Vector3[] endLocations; // End positions for the player to walk to
+    float walkTimer; // Timer controlling the walk animation
+    int chosenFirework; // Index of the chosen firework
+    bool hasChosen = false; // Indicates if the player has made a choice
 
     void Start()
     {
+        // Get the player's animator component from the first child
         playerAnimator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     public void ResetStats()
     {
+        // Reset player state variables
         startWalking = false;
         walkTimer = 0;
         hasChosen = false;
@@ -33,6 +35,7 @@ public class PlayerFirework : MonoBehaviour
         {
             if (walkTimer > 1)
             {
+                // Stop walking animation when destination is reached
                 playerAnimator.SetBool("Move", false);
                 if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
                 {
@@ -41,6 +44,7 @@ public class PlayerFirework : MonoBehaviour
             }
             else
             {
+                // Move the player towards the chosen firework
                 transform.position = Vector3.Slerp(startLocation, endLocations[chosenFirework], walkTimer);
                 walkTimer += Time.deltaTime / 3;
                 playerAnimator.SetBool("Move", true);
@@ -54,9 +58,10 @@ public class PlayerFirework : MonoBehaviour
 
     public void ChooseFirework1(InputAction.CallbackContext _context)
     {
+        // Handle selection of the first firework
         if (_context.performed && FireworkMinigameManager.Instance.chosenFirework[0] == 0 && !hasChosen)
         {
-            FireworkMinigameManager.Instance.chosenFirework[0] = gameObject.GetComponent<MainMenuPlayer>().playerNum + 1;
+            FireworkMinigameManager.Instance.chosenFirework[0] = GetComponent<MainMenuPlayer>().playerNum + 1;
             startWalking = true;
             startLocation = transform.position;
             hasChosen = true;
@@ -66,9 +71,10 @@ public class PlayerFirework : MonoBehaviour
 
     public void ChooseFirework2(InputAction.CallbackContext _context)
     {
+        // Handle selection of the second firework
         if (_context.performed && FireworkMinigameManager.Instance.chosenFirework[1] == 0 && !hasChosen)
         {
-            FireworkMinigameManager.Instance.chosenFirework[1] = gameObject.GetComponent<MainMenuPlayer>().playerNum + 1;
+            FireworkMinigameManager.Instance.chosenFirework[1] = GetComponent<MainMenuPlayer>().playerNum + 1;
             startWalking = true;
             startLocation = transform.position;
             hasChosen = true;
@@ -78,9 +84,10 @@ public class PlayerFirework : MonoBehaviour
 
     public void ChooseFirework3(InputAction.CallbackContext _context)
     {
+        // Handle selection of the third firework
         if (_context.performed && FireworkMinigameManager.Instance.chosenFirework[2] == 0 && !hasChosen)
         {
-            FireworkMinigameManager.Instance.chosenFirework[2] = gameObject.GetComponent<MainMenuPlayer>().playerNum + 1;
+            FireworkMinigameManager.Instance.chosenFirework[2] = GetComponent<MainMenuPlayer>().playerNum + 1;
             startWalking = true;
             startLocation = transform.position;
             hasChosen = true;
@@ -90,9 +97,10 @@ public class PlayerFirework : MonoBehaviour
 
     public void ChooseFirework4(InputAction.CallbackContext _context)
     {
+        // Handle selection of the fourth firework
         if (_context.performed && FireworkMinigameManager.Instance.chosenFirework[3] == 0 && !hasChosen)
         {
-            FireworkMinigameManager.Instance.chosenFirework[3] = gameObject.GetComponent<MainMenuPlayer>().playerNum + 1;
+            FireworkMinigameManager.Instance.chosenFirework[3] = GetComponent<MainMenuPlayer>().playerNum + 1;
             startWalking = true;
             startLocation = transform.position;
             hasChosen = true;

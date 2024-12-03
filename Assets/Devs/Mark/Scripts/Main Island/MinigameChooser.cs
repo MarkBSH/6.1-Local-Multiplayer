@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MinigameChooser : MonoBehaviour
 {
-    //singleton
     private static MinigameChooser m_Instance;
     public static MinigameChooser Instance
     {
@@ -17,10 +16,7 @@ public class MinigameChooser : MonoBehaviour
                 m_Instance = FindObjectOfType<MinigameChooser>();
                 if (m_Instance == null)
                 {
-                    GameObject _obj = new()
-                    {
-                        name = typeof(MinigameChooser).Name
-                    };
+                    GameObject _obj = new GameObject(nameof(MinigameChooser));
                     m_Instance = _obj.AddComponent<MinigameChooser>();
                 }
             }
@@ -28,46 +24,47 @@ public class MinigameChooser : MonoBehaviour
         }
     }
 
-    public PlayerChooseGame[] games; //< list of a script on every player
-    string[] chosenGames; //< list of the chosen games by players
-    GameObject countdownText; //< gameobject with the text for the countdown
-    GameObject choosingPanel; //< gameobject with the panels for choosing the game
-    [SerializeField] Animator chooseAnimation; //< an animator for the choose animation
-    bool canStartCooldown = true; //< a bool to not interupt the coroutine
-    Coroutine co; //< to be able to stop the coroutine
-    bool hasSaved = false;
+    public PlayerChooseGame[] games; // Array of PlayerChooseGame scripts
+    string[] chosenGames; // Array to store chosen games
+    GameObject countdownText; // UI element for countdown
+    GameObject choosingPanel; // UI panel displayed during choosing
+    [SerializeField] Animator chooseAnimation; // Animator for selection animation
+    bool canStartCooldown = true; // Control variable for cooldown
+    Coroutine co; // Reference to the running coroutine
+    bool hasSaved = false; // Indicates if the game choice has been saved
 
     void Awake()
     {
-        //finding and disabeling the UI for later
+        // Initialize UI elements
         countdownText = GameObject.Find("CountdownText");
         countdownText.SetActive(false);
         choosingPanel = GameObject.Find("ChoosingPanel");
         choosingPanel.SetActive(false);
     }
 
-    //function to clear the chosen games from last round
     public void PlayerSetup()
     {
+        // Set up players for the minigame selection
         games = FindObjectsOfType<PlayerChooseGame>();
         chosenGames = new string[games.Length];
     }
 
     void Update()
     {
-        //for loop to get all chosen games
+        // Update chosen games
         for (int i = 0; i < games.Length; i++)
         {
             chosenGames[i] = games[i].chosenGame;
         }
-        //for loop to check if everyone has chosen a game and then stopping/starting the countdown coroutine
+
+        // Check if all players have chosen a game
         for (int i = 0; i < games.Length; i++)
         {
             if (chosenGames[i] == "")
             {
                 countdownText.SetActive(false);
                 canStartCooldown = true;
-                if (co != null && hasSaved == false)
+                if (co != null && !hasSaved)
                 {
                     StopCoroutine(co);
                 }
@@ -75,7 +72,7 @@ public class MinigameChooser : MonoBehaviour
             }
             if (i == games.Length - 1)
             {
-                if (canStartCooldown == true)
+                if (canStartCooldown)
                 {
                     co = StartCoroutine(StartCountdown());
                 }
@@ -87,10 +84,10 @@ public class MinigameChooser : MonoBehaviour
     {
         canStartCooldown = false;
         countdownText.SetActive(true);
-        //countdown for loop
+        // Countdown loop
         for (int i = 5; i >= 0; i--)
         {
-            countdownText.GetComponent<TextMeshProUGUI>().text = i + "";
+            countdownText.GetComponent<TextMeshProUGUI>().text = i.ToString();
             yield return new WaitForSeconds(1);
         }
 
@@ -101,16 +98,13 @@ public class MinigameChooser : MonoBehaviour
     {
         hasSaved = true;
         countdownText.SetActive(false);
-        //randomly choosing the minigame
+        // Randomly select a player's chosen game
         int tempChosenPlayer = Random.Range(0, games.Length);
-        //confirms the games so if someone goes off the button it's still these mingames
         string confirmedGame = chosenGames[tempChosenPlayer];
-        //showing an animation for who wins
-        string tempChosenAnimation = "Player " + (tempChosenPlayer + 1);
+        string tempChosenAnimation = $"Player {tempChosenPlayer + 1}";
         choosingPanel.SetActive(true);
         chooseAnimation.SetTrigger(tempChosenAnimation);
         yield return new WaitForSeconds(5);
-        //loading the scene of the chosen minigame
         SceneManager.LoadScene(confirmedGame);
     }
 }

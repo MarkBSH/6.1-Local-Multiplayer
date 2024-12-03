@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class FireworkPlayerScripts : MonoBehaviour
+public class CanonPlayerScripts : MonoBehaviour
 {
     GameObject[] players;
     PlayerInput[] playerInput;
@@ -13,13 +12,13 @@ public class FireworkPlayerScripts : MonoBehaviour
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        playerInput = new PlayerInput[players.Length];
+        playerInput = new PlayerInput[players.Length]; // Initialize the array
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             playerInput[i] = players[i].GetComponent<PlayerInput>();
-            playerInput[i].SwitchCurrentActionMap("Fireworks");
+            playerInput[i].SwitchCurrentActionMap("Canon");
         }
     }
 
@@ -27,12 +26,12 @@ public class FireworkPlayerScripts : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        playerInput = new PlayerInput[players.Length];
+        playerInput = new PlayerInput[players.Length]; // Initialize the array
 
         for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
         {
             playerInput[i] = players[i].GetComponent<PlayerInput>();
-            playerInput[i].SwitchCurrentActionMap("Fireworks");
+            playerInput[i].SwitchCurrentActionMap("Canon");
         }
     }
 }

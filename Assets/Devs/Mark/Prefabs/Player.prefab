@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8395056830539851017}
   - component: {fileID: 7994791933618402769}
   - component: {fileID: 4728868035573010528}
+  - component: {fileID: 4906265903562467529}
   - component: {fileID: 7240048798258321736}
   - component: {fileID: 3075019885273128618}
   - component: {fileID: 5533386954779477147}
@@ -193,6 +194,18 @@ MonoBehaviour:
   - {x: -1.8, y: 1.7, z: -2}
   - {x: 1.8, y: 1.7, z: -2}
   - {x: 5, y: 1.7, z: -2}
+--- !u!114 &4906265903562467529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441819148865368702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9be3e93a6d2d8489d767d0af0e0fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7240048798258321736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +447,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: dcdca8dd-cab0-4001-b476-a679a8dbf1a7
     m_ActionName: Fireworks/Firework4[/Keyboard/v,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4906265903562467529}
+        m_TargetAssemblyTypeName: CanonAttacking, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8e0cdf40-2c3e-4577-b3a6-d98071f175bc
+    m_ActionName: Canon/Attack[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -502,7 +531,7 @@ BoxCollider:
     m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 887
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

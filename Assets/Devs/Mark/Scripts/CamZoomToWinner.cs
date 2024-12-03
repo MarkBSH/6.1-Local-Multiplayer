@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CamZoomToWinner : MonoBehaviour
 {
-    //singleton
     private static CamZoomToWinner m_Instance;
     public static CamZoomToWinner Instance
     {
@@ -16,10 +15,7 @@ public class CamZoomToWinner : MonoBehaviour
                 m_Instance = FindObjectOfType<CamZoomToWinner>();
                 if (m_Instance == null)
                 {
-                    GameObject _obj = new()
-                    {
-                        name = typeof(CamZoomToWinner).Name
-                    };
+                    GameObject _obj = new GameObject(nameof(CamZoomToWinner));
                     m_Instance = _obj.AddComponent<CamZoomToWinner>();
                 }
             }
@@ -27,24 +23,26 @@ public class CamZoomToWinner : MonoBehaviour
         }
     }
 
-    [SerializeField] Vector3 startLocation; //< resets the camera to the startlocation
-    GameObject winningPlayer; //< takes the location of the winning player
-    bool canZoom = false; //< check for if the cam can zoom in
-    bool canTurn = false;
-    float timer = 0; //< slerp timer
-
-    void Start()
-    {
-        //restes the location of the cam
-        transform.position = startLocation;
-    }
+    [SerializeField] Vector3 startLocation; // Starting position of the camera
+    GameObject winningPlayer; // The winning player's game object
+    bool canZoom = false; // Flag to control zoom action
+    bool canTurn = false; // Flag to control rotation
+    float timer = 0; // Timer for interpolation
 
     void Update()
     {
-        //slerp for zooming in to the winning player
         if (canZoom)
         {
-            transform.position = Vector3.Slerp(startLocation, new Vector3(winningPlayer.transform.position.x, winningPlayer.transform.position.y + 5, winningPlayer.transform.position.z - 5), timer);
+            // Smoothly move the camera towards the winner
+            transform.position = Vector3.Slerp(
+                startLocation,
+                new Vector3(
+                    winningPlayer.transform.position.x,
+                    winningPlayer.transform.position.y + 5,
+                    winningPlayer.transform.position.z - 5
+                ),
+                timer
+            );
             timer += Time.deltaTime / 2;
             if (timer > 1)
             {
@@ -55,7 +53,10 @@ public class CamZoomToWinner : MonoBehaviour
 
         if (canTurn)
         {
-            transform.rotation = Quaternion.Euler(Vector3.Slerp(new Vector3(40, 0, 0), new Vector3(30, 0, 0), timer));
+            // Smoothly rotate the camera
+            transform.rotation = Quaternion.Euler(
+                Vector3.Slerp(new Vector3(40, 0, 0), new Vector3(30, 0, 0), timer)
+            );
             timer += Time.deltaTime / 2;
             if (timer > 1)
             {
@@ -65,11 +66,11 @@ public class CamZoomToWinner : MonoBehaviour
         }
     }
 
-    //finds the player and starts the zoom in
     public void StartZooming(GameObject player)
     {
         canZoom = true;
         winningPlayer = player;
+        startLocation = transform.position;
     }
 
     public void CamLookUp()

@@ -6,63 +6,77 @@ using UnityEngine.SceneManagement;
 
 public class MainMovement : MonoBehaviour
 {
-    Rigidbody m_RB; //< rigidbody of the player
-    Animator playerAnimator; //< animator of the player
-    public Animator skinAnimator; //< animator of the skin
-    Vector2 moveDir; //< the directon of where the player is going
-    public float movementSpeed; //< the speed of the player
-    public float movementMax; //< the maximum speed of the player
-    public float jumpForce; //< the jumpforce of the player
-    public bool canJump; //< check for if the player can jump
-    float jumpCooldown = 0.2f; //< a cooldown for the jumping for no continuus jumping
-    float jumpTimer = 0; //< a float variable for ^
+    Rigidbody m_RB; // Rigidbody of the player
+    Animator playerAnimator; // Animator of the player
+    public Animator skinAnimator; // Animator of the skin
+    Vector2 moveDir; // Direction of movement
+    public float movementSpeed; // Movement speed
+    public float movementMax; // Maximum speed
+    public float jumpForce; // Jump force
+    public bool canJump; // Indicates if the player can jump
+    float jumpCooldown = 0.2f; // Cooldown between jumps
+    float jumpTimer = 0; // Timer for jump cooldown
 
     void Start()
     {
-        //getting the components
         m_RB = GetComponent<Rigidbody>();
         playerAnimator = transform.GetChild(0).GetComponent<Animator>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Actions to perform when a new scene is loaded
+        canJump = false;
     }
 
     void Update()
     {
-        //add force for movement
-        m_RB.AddForce(new Vector3(moveDir.x * movementSpeed * (Time.deltaTime * 60), 0, moveDir.y * movementSpeed * (Time.deltaTime * 60)), ForceMode.Force);
-        //limiting the speed of the player
-        if (m_RB.velocity.x > movementMax || m_RB.velocity.z > movementMax || m_RB.velocity.x < -movementMax || m_RB.velocity.z < -movementMax)
+        // Apply movement force
+        m_RB.AddForce(new Vector3(
+            moveDir.x * movementSpeed * (Time.deltaTime * 60),
+            0,
+            moveDir.y * movementSpeed * (Time.deltaTime * 60)
+        ), ForceMode.Force);
+
+        // Limit the player's speed
+        if (m_RB.velocity.magnitude > movementMax)
         {
             m_RB.velocity = m_RB.velocity.normalized * movementMax;
         }
-        //rotating the player via the velocity
-        if (m_RB.velocity.x > 0.1f || m_RB.velocity.z > 0.1f || m_RB.velocity.x < -0.1f || m_RB.velocity.z < -0.1f)
+
+        // Rotate player to face movement direction
+        if (m_RB.velocity.magnitude > 0.1f)
         {
-            gameObject.transform.forward = new(m_RB.velocity.x, 0, m_RB.velocity.z);
+            transform.forward = new Vector3(m_RB.velocity.x, 0, m_RB.velocity.z);
         }
-        //jump cooldown timer
+
+        // Increment jump timer
         if (jumpTimer <= jumpCooldown)
         {
             jumpTimer += Time.deltaTime;
         }
     }
 
-    //setting the skin animator
+    // Sets the animator based on selected skin
     public void SetAnimator()
     {
         if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
         {
-            skinAnimator = transform.GetChild(0).transform.GetChild(GetComponent<MainMenuPlayer>().selectedSkin).GetComponent<Animator>();
+            skinAnimator = transform.GetChild(0)
+                .GetChild(GetComponent<MainMenuPlayer>().selectedSkin)
+                .GetComponent<Animator>();
         }
     }
 
+    // Handles movement input
     public void GetMovement(InputAction.CallbackContext _context)
     {
-        //getting the vector 2 form the input system and setting the animators for if the player is moving
         moveDir = _context.ReadValue<Vector2>();
         if (_context.performed)
         {
-            Debug.Log("kancdvv");
             playerAnimator.SetBool("Move", true);
-            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            if (skinAnimator != null)
             {
                 skinAnimator.SetBool("Move", true);
             }
@@ -70,33 +84,35 @@ public class MainMovement : MonoBehaviour
         if (_context.canceled)
         {
             playerAnimator.SetBool("Move", false);
-            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            if (skinAnimator != null)
             {
                 skinAnimator.SetBool("Move", false);
             }
         }
     }
 
+    // Handles jump input
     public void Jump(InputAction.CallbackContext _context)
     {
-        //add force for jumping and starting the jump animation
         if (_context.performed && canJump && jumpTimer >= jumpCooldown)
         {
-            m_RB.AddForce(transform.up * jumpForce);
+            m_RB.AddForce(Vector3.up * jumpForce, ForceMode.Force);
             jumpTimer = 0;
             playerAnimator.SetTrigger("Jump");
-            if (GetComponent<MainMenuPlayer>().selectedSkin != 0)
+            if (skinAnimator != null)
             {
                 skinAnimator.SetTrigger("Jump");
             }
         }
     }
-    //if the player is on the groud you can jump
+
+    // Called when entering a trigger collider
     void OnTriggerEnter(Collider other)
     {
         canJump = true;
     }
-    //if the player isn't on the groud you can't jump
+
+    // Called when exiting a trigger collider
     void OnTriggerExit(Collider other)
     {
         canJump = false;

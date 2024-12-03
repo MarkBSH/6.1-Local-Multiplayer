@@ -7,14 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class CountdownManager : MonoBehaviour
 {
-    int count = 100; //< timer till game is over
-    [SerializeField] TextMeshProUGUI countText; //< text for the timer
-    [SerializeField] Image countdownBox; //< box for sprite change
-    [SerializeField] Sprite redCountdownBox; //< sprite changer
-    [SerializeField] Animator countdownBoxAnim; //< animator for countdown effect
-    [SerializeField] Animator animatorFinish; //< animator for finnish effect
-
-    //coroutine starter
+    int count = 100; // Timer until the game is over
+    [SerializeField] TextMeshProUGUI countText; // UI text for the timer
+    [SerializeField] Image countdownBox; // UI image for the countdown box
+    [SerializeField] Sprite redCountdownBox; // Sprite when the timer is low
+    [SerializeField] Animator countdownBoxAnim; // Animator for countdown effects
+    [SerializeField] Animator animatorFinish; // Animator for finish effects
 
     void Start()
     {
@@ -22,17 +20,17 @@ public class CountdownManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    // Restarts the countdown when a new scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine(Countdown());
     }
 
+    // Handles the countdown timer
     IEnumerator Countdown()
     {
-        //countdown every second and updating the text
         yield return new WaitForSeconds(1);
         count--;
-
         countText.text = count.ToString();
 
         if (count < 10)

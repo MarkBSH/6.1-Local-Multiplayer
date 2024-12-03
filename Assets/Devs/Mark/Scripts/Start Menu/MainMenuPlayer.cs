@@ -5,66 +5,62 @@ using UnityEngine.InputSystem;
 
 public class MainMenuPlayer : MonoBehaviour
 {
-    public bool isReady = false; //< check if player is ready
-    public int playerNum; //< int for when the player has joined
-    public int selectedSkin = 0; //< int for the skin selected
+    public bool isReady = false; // Indicates if the player is ready
+    public int playerNum; // The player's number
+    public int selectedSkin = 0; // Index of the selected skin
 
-    Vector2 moveDir; //< a vector2 to hold the movement keys input to move the player skin preview
+    Vector2 moveDir; // Direction for moving the skin preview
 
     void Start()
     {
-        MainMenu.Instance.UpdateCosmVisuals();
+        MainMenu.Instance.UpdateCosmVisuals(); // Update cosmetic visuals
     }
 
     void Update()
     {
-        //moves the player inside the skin selector screen
-        MainMenu.Instance.skinSelector[playerNum].transform.forward = new(moveDir.x, 0, moveDir.y);
+        // Rotate the skin preview based on input
+        MainMenu.Instance.skinSelector[playerNum].transform.forward = new Vector3(moveDir.x, 0, moveDir.y);
     }
 
-    //gets a vector2 from the movement keys
     public void GetMovement(InputAction.CallbackContext _context)
     {
         if (_context.performed)
         {
-            moveDir = _context.ReadValue<Vector2>();
+            moveDir = _context.ReadValue<Vector2>(); // Get movement input
         }
     }
 
-    //ready up for the game
     public void ReadyUp(InputAction.CallbackContext _context)
     {
         if (_context.performed)
         {
-            isReady = true;
+            isReady = true; // Set the player as ready
         }
     }
 
-    //changes skinlist up
     public void ScrollUp(InputAction.CallbackContext _context)
     {
         if (_context.performed)
         {
-            selectedSkin--;
+            selectedSkin--; // Decrement the skin index
             if (selectedSkin < 0)
             {
-                selectedSkin = MainMenu.Instance.totalSkins - 1;
+                selectedSkin = MainMenu.Instance.totalSkins - 1; // Loop to the last skin
             }
-            MainMenu.Instance.UpdateCosmVisuals();
+            MainMenu.Instance.UpdateCosmVisuals(); // Update cosmetic visuals
         }
     }
 
-    //changes skinlist down
     public void ScrollDown(InputAction.CallbackContext _context)
     {
         if (_context.performed)
         {
-            selectedSkin++;
+            selectedSkin++; // Increment the skin index
             if (selectedSkin > MainMenu.Instance.totalSkins - 1)
             {
-                selectedSkin = 0;
+                selectedSkin = 0; // Loop to the first skin
             }
-            MainMenu.Instance.UpdateCosmVisuals();
+            MainMenu.Instance.UpdateCosmVisuals(); // Update cosmetic visuals
         }
     }
 }

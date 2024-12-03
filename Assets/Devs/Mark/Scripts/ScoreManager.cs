@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    //singleton
+    // Singleton instance
     private static ScoreManager m_Instance;
     public static ScoreManager Instance
     {
@@ -17,10 +17,8 @@ public class ScoreManager : MonoBehaviour
                 m_Instance = FindObjectOfType<ScoreManager>();
                 if (m_Instance == null)
                 {
-                    GameObject _obj = new()
-                    {
-                        name = typeof(ScoreManager).Name
-                    };
+                    GameObject _obj = new();
+                    _obj.name = typeof(ScoreManager).Name;
                     m_Instance = _obj.AddComponent<ScoreManager>();
                 }
             }
@@ -28,31 +26,33 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    int P1Score = 0; //< player 1 score
-    TextMeshProUGUI P1Text; //< player 1 score text
-    int P2Score = 0; //< player 2 score
-    TextMeshProUGUI P2Text; //< player 2 score text
-    int P3Score = 0; //< player 3 score
-    TextMeshProUGUI P3Text; //< player 3 score text
-    int P4Score = 0; //< player 4 score
-    TextMeshProUGUI P4Text; //< player 4 score text
+    // Player scores and associated UI texts
+    int P1Score = 0;
+    TextMeshProUGUI P1Text;
+    int P2Score = 0;
+    TextMeshProUGUI P2Text;
+    int P3Score = 0;
+    TextMeshProUGUI P3Text;
+    int P4Score = 0;
+    TextMeshProUGUI P4Text;
 
     void Start()
     {
+        // Prevent this object from being destroyed and subscribe to scene loaded event
         DontDestroyOnLoad(this);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // Update score texts when the main scene is loaded
         if (scene.name == "MarkMain")
         {
             FindAndSetTexts();
         }
     }
 
-
-    //adds points to a player depending on who wins
+    // Add points to a player's score based on the winner
     public void AddPoints(string winner)
     {
         switch (winner)
@@ -72,16 +72,16 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    //function to show the scores on screen
+    // Find and set the score texts on the UI
     public void FindAndSetTexts()
     {
         P1Text = GameObject.Find("P1Text").GetComponent<TextMeshProUGUI>();
-        P1Text.text = "" + P1Score;
+        P1Text.text = P1Score.ToString();
         P2Text = GameObject.Find("P2Text").GetComponent<TextMeshProUGUI>();
-        P2Text.text = "" + P2Score;
+        P2Text.text = P2Score.ToString();
         P3Text = GameObject.Find("P3Text").GetComponent<TextMeshProUGUI>();
-        P3Text.text = "" + P3Score;
+        P3Text.text = P3Score.ToString();
         P4Text = GameObject.Find("P4Text").GetComponent<TextMeshProUGUI>();
-        P4Text.text = "" + P4Score;
+        P4Text.text = P4Score.ToString();
     }
 }

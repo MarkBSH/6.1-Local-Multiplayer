@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class FireworkMinigameManager : MonoBehaviour
 {
-    //singleton
     private static FireworkMinigameManager m_Instance;
     public static FireworkMinigameManager Instance
     {
@@ -16,10 +15,8 @@ public class FireworkMinigameManager : MonoBehaviour
                 m_Instance = FindObjectOfType<FireworkMinigameManager>();
                 if (m_Instance == null)
                 {
-                    GameObject _obj = new()
-                    {
-                        name = typeof(FireworkMinigameManager).Name
-                    };
+                    GameObject _obj = new();
+                    _obj.name = typeof(FireworkMinigameManager).Name;
                     m_Instance = _obj.AddComponent<FireworkMinigameManager>();
                 }
             }
@@ -38,16 +35,16 @@ public class FireworkMinigameManager : MonoBehaviour
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-
         players = GameObject.FindGameObjectsWithTag("Player");
         canvas = GameObject.Find("canvas");
     }
 
+    // Resets variables when a new scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         chosenFirework = new int[4];
         hasEnded = false;
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<PlayerFirework>().ResetStats();
@@ -76,14 +73,14 @@ public class FireworkMinigameManager : MonoBehaviour
         }
     }
 
+    // Handles the end of the minigame
     IEnumerator EndGame()
     {
         CamZoomToWinner.Instance.CamLookUp();
-
         canvas.SetActive(false);
-
         yield return new WaitForSeconds(1f);
 
+        // Instantiate fireworks for each player
         for (int i = 0; i < chosenFirework.Length; i++)
         {
             if (chosenFirework[i] != 0)
@@ -101,11 +98,10 @@ public class FireworkMinigameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(4);
-
         CamZoomToWinner.Instance.StartZooming(players[chosenFirework[chosenWinner] - 1]);
-
         yield return new WaitForSeconds(4);
 
+        // Add points to the winning player
         switch (players[chosenFirework[chosenWinner] - 1].GetComponent<MainMenuPlayer>().playerNum)
         {
             case 0:
