@@ -11,7 +11,7 @@ public class CamScript : MonoBehaviour
     GameObject camObj; // Camera GameObject
     Vector3 camPos; // Camera position
     float minZoom = 0.6f; // Minimum zoom level
-    float maxZoom = 200f; // Maximum zoom level
+    float maxZoom = 3f; // Maximum zoom level
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class CamScript : MonoBehaviour
         // Calculate the distance between the uppermost and downmost players
         float verticalDistance = UPos - DPos;
         // Use the larger distance to determine the zoom level
-        float distance = Mathf.Max(horizontalDistance, verticalDistance) / 10;
+        float distance = Mathf.Max(horizontalDistance, verticalDistance) / 100;
 
         transform.localScale = new Vector3(1, Mathf.Clamp(distance, minZoom, maxZoom), Mathf.Clamp(distance, minZoom, maxZoom)); // Set the zoom level
     }
