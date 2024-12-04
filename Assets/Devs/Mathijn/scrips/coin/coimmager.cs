@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using TMPro;
+using UnityEngine.Rendering;
 
 public class coimmager : MonoBehaviour
 {
     public int[] coins = {0,0,0,0};
+    public TMP_Text[] _Texts;
     public void addcoins(int player, int coinss)
     {
         coins[player] += coinss;
+        _Texts[player].text = coins[player].ToString();
     }
-    private IEnumerator waitandendmylife()
+    public IEnumerator waitandendmylife()
     {
         yield return new WaitForSeconds(1.5f);
         for (int i = 0; i < coins.Length; i++)

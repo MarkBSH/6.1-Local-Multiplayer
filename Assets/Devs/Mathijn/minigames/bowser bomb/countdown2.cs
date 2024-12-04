@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Countdown3 : MonoBehaviour
+public class Countdown4 : MonoBehaviour
 {
     public int timer;
     public int timerstart;
@@ -11,20 +11,16 @@ public class Countdown3 : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textMeshPro2;
     [SerializeField] private Image countdown;
     [SerializeField] private Sprite redbackgroundthing;
+    [SerializeField] private Sprite notredbackgroundthing;
     [SerializeField] private Animator Animator;
     [SerializeField] private Animator Animatorfinish;
-    [SerializeField] private coimmager coimmager;
+    [SerializeField] private playerwhere playerwhere;
     GameObject[] players;
     void Start()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < CosmeticsSpawner.Instance.players.Length; i++)
-        {
-            players[i].GetComponent<coinspickup>().enabled = true;
-        }
-        StartCoroutine(StartCountdown2());
+        
     }
-    IEnumerator StartCountdown2() 
+    public IEnumerator StartCountdown2() 
     {
         while (timerstart > 0) 
         {
@@ -37,6 +33,7 @@ public class Countdown3 : MonoBehaviour
     }
     IEnumerator StartCountdown()
     {
+        countdown.sprite = notredbackgroundthing;
         while (timer > 0)
         {
             yield return new WaitForSeconds(1f);
@@ -54,7 +51,6 @@ public class Countdown3 : MonoBehaviour
         }
         _textMeshPro.text = "0";
         Animator.SetTrigger("effect");
-        Animatorfinish.SetTrigger("finish");
-        StartCoroutine(coimmager.waitandendmylife());
+        playerwhere.pressbutton();
     }
 }

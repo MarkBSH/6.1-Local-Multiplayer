@@ -8,7 +8,9 @@ public class coinsspawn : MonoBehaviour
     private bool spawning = true; 
     public Transform midelPoint;
     public GameObject prefabToSpawn;
+    public GameObject prefabToSpawnbag;
     public float spawncooldown = 0.5f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +33,13 @@ public class coinsspawn : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(directionToMiddle);
             Quaternion finalRotation = lookRotation * Quaternion.Euler(0, 90, 0);
 
-            GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, finalRotation);
-
+            if (Random.Range(0, 7) == 0)
+            {
+                GameObject spawnedObject = Instantiate(prefabToSpawnbag, spawnPosition, finalRotation);
+            } else
+            {
+                GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, finalRotation);
+            }
             yield return new WaitForSeconds(spawncooldown);
         }
     }
