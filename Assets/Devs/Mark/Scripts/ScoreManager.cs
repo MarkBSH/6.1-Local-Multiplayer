@@ -36,6 +36,8 @@ public class ScoreManager : MonoBehaviour
     int P4Score = 0;
     TextMeshProUGUI P4Text;
 
+    List<int> scores = new List<int>();
+
     bool hasEnded = false;
 
     void Start()
@@ -51,20 +53,13 @@ public class ScoreManager : MonoBehaviour
         if (scene.name == "MarkMain" && !hasEnded)
         {
             FindAndSetTexts();
-            if (P1Score >= 5)
+            if (P1Score >= 5 || P2Score >= 5 || P3Score >= 5 || P4Score >= 5)
             {
-                SceneManager.LoadScene("EndScene");
-            }
-            if (P2Score >= 5)
-            {
-                SceneManager.LoadScene("EndScene");
-            }
-            if (P3Score >= 5)
-            {
-                SceneManager.LoadScene("EndScene");
-            }
-            if (P4Score >= 5)
-            {
+                hasEnded = true;
+                scores.Add(P1Score);
+                scores.Add(P2Score);
+                scores.Add(P3Score);
+                scores.Add(P4Score);
                 SceneManager.LoadScene("EndScene");
             }
         }
