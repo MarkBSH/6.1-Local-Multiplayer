@@ -108,9 +108,9 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FoamAmount: 1
+    - _FoamAmount: 5
     - _FoamScale: 300
-    - _FoamSpeed: 1
+    - _FoamSpeed: 0.25
     - _Foamcutoff: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
