@@ -7,26 +7,16 @@ public class UnderWaterMovement : MonoBehaviour
 {
     public float speed = 5.0f;
     private Vector2 movement;
-    private int playerNum;
-    private GameObject submarine;
+
+    void Update()
+    {
+
+        Vector3 move = new Vector3(-movement.x, movement.y, 0) * speed * Time.deltaTime;
+        UnderWaterGameManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].transform.Translate(move);
+    }
 
     public void GetMovement(InputAction.CallbackContext _context)
     {
         movement = _context.ReadValue<Vector2>();
-    }
-
-    void Start()
-    {
-        playerNum = GetComponent<MainMenuPlayer>().playerNum;
-        submarine = UnderWaterGameManager.Instance.GetSubmarineByPlayerNum(playerNum);
-    }
-
-    void Update()
-    {
-        if (submarine != null)
-        {
-            Vector3 move = new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
-            submarine.transform.Translate(move);
-        }
     }
 }

@@ -10,6 +10,9 @@ public class CamScript : MonoBehaviour
     float DPos; // Downmost player position
     GameObject camObj; // Camera GameObject
     Vector3 camPos; // Camera position
+    float zoomSpeed = 10f; // Speed at which the camera zooms
+    float minZoom = 40f; // Minimum zoom level
+    float maxZoom = 200f; // Maximum zoom level
 
     void Start()
     {
@@ -51,5 +54,15 @@ public class CamScript : MonoBehaviour
         camPos = new Vector3((RPos + LPos) / 2, 0, (UPos + DPos) / 2);
         transform.position = camPos; // Move the camera to the center
         camObj.transform.LookAt(camPos); // Make the camera look at the center
+
+        // Calculate the distance between the leftmost and rightmost players
+        float horizontalDistance = LPos - RPos;
+        // Calculate the distance between the uppermost and downmost players
+        float verticalDistance = UPos - DPos;
+        // Use the larger distance to determine the zoom level
+        float distance = Mathf.Max(horizontalDistance, verticalDistance);
+
+        // Adjust the camera's field of view based on the distance
+        Camera.main.fieldOfView = Mathf.Clamp(distance * zoomSpeed, minZoom, maxZoom);
     }
 }

@@ -22,12 +22,10 @@ public class CanonGamemanager : MonoBehaviour
 
     public List<CanonHealth> canonHealths; // List of all cannons' health
     GameObject winner; // The winning player's cannon
+    bool hasWon = false;
 
     void Start()
     {
-        canonHealths = new List<CanonHealth>(FindObjectsOfType<CanonHealth>());
-        canonHealths.Reverse(); // Reverse the order of the obtained canon healths
-
         int activePlayerCount = CosmeticsSpawner.Instance.spawningPlayers;
         for (int i = canonHealths.Count - 1; i >= activePlayerCount; i--)
         {
@@ -36,7 +34,7 @@ public class CanonGamemanager : MonoBehaviour
         }
     }
 
-    public IEnumerator OnHealthChanged()
+    public void OnHealthChanged()
     {
         int aliveCount = 0;
 
@@ -50,7 +48,7 @@ public class CanonGamemanager : MonoBehaviour
             }
         }
 
-        if (aliveCount == 1)
+        if (aliveCount == 1 && hasWon == false)
         {
             // Award points to the winner
             switch (winner.GetComponent<MainMenuPlayer>().playerNum)
@@ -68,15 +66,23 @@ public class CanonGamemanager : MonoBehaviour
                     ScoreManager.Instance.AddPoints("P4");
                     break;
             }
-            yield return new WaitForSeconds(1);
 
-            // Zoom camera to the winner
-            CamZoomToWinner.Instance.StartZooming(winner);
+            hasWon = true;
 
-            yield return new WaitForSeconds(4);
-
-            // Load the main scene
-            SceneManager.LoadScene("MarkMain");
+            StartCoroutine(EndMoment());
         }
+    }
+
+    IEnumerator EndMoment()
+    {
+        yield return new WaitForSeconds(1);
+
+        // Zoom camera to the winner
+        CamZoomToWinner.Instance.StartZooming(winner);
+
+        yield return new WaitForSeconds(4);
+
+        // Load the main scene
+        SceneManager.LoadScene("MarkMain");
     }
 }

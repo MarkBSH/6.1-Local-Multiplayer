@@ -27,21 +27,19 @@ public class UnderWaterGameManager : MonoBehaviour
     public GameObject[] submarines;
     public List<UnderWaterHealth> underWaterHealths; // List of all cannons' health
     GameObject winner;
+    bool hasWon = false;
 
     void Start()
     {
-        underWaterHealths = new List<UnderWaterHealth>(FindObjectsOfType<UnderWaterHealth>());
-        underWaterHealths.Reverse(); // Reverse the order of the obtained canon healths
-
         int activePlayerCount = CosmeticsSpawner.Instance.spawningPlayers;
         for (int i = underWaterHealths.Count - 1; i >= activePlayerCount; i--)
         {
-            Destroy(underWaterHealths[i].gameObject);
-            underWaterHealths.RemoveAt(i);
+            //Destroy(underWaterHealths[i].gameObject);
+            //underWaterHealths.RemoveAt(i);
         }
     }
 
-    public IEnumerator OnHealthChanged()
+    public void OnHealthChanged()
     {
         int aliveCount = 0;
 
@@ -55,7 +53,7 @@ public class UnderWaterGameManager : MonoBehaviour
             }
         }
 
-        if (aliveCount == 1)
+        if (aliveCount == 1 && hasWon == false)
         {
             // Award points to the winner
             switch (winner.GetComponent<MainMenuPlayer>().playerNum)
@@ -73,20 +71,23 @@ public class UnderWaterGameManager : MonoBehaviour
                     ScoreManager.Instance.AddPoints("P4");
                     break;
             }
-            yield return new WaitForSeconds(1);
 
-            // Zoom camera to the winner
-            CamZoomToWinner.Instance.StartZooming(winner);
+            hasWon = true;
 
-            yield return new WaitForSeconds(4);
-
-            // Load the main scene
-            SceneManager.LoadScene("MarkMain");
+            StartCoroutine(EndMoment());
         }
     }
 
-    public GameObject GetSubmarineByPlayerNum(int playerNum)
+    IEnumerator EndMoment()
     {
-        return submarines[playerNum];
+        yield return new WaitForSeconds(1);
+
+        // Zoom camera to the winner
+        CamZoomToWinner.Instance.StartZooming(winner);
+
+        yield return new WaitForSeconds(4);
+
+        // Load the main scene
+        SceneManager.LoadScene("MarkMain");
     }
 }
