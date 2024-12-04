@@ -74,7 +74,7 @@ public class playerwhere : MonoBehaviour
         }
         players = GameObject.FindGameObjectsWithTag("Player");
         playernum = Random.Range(0, players.Length);
-        texts[playernum].text = "now needs to pick a detentor";
+        texts[playernum].text = "pick a detentor";
         Debug.Log("player " + playernum + "will boemb first");
     }
     public void nextplayer()
