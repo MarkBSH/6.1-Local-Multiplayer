@@ -12,7 +12,7 @@ public class UnderWaterMovement : MonoBehaviour
     {
 
         Vector3 move = new Vector3(-movement.x, movement.y, 0) * speed * Time.deltaTime;
-        UnderWaterGameManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].transform.Translate(move);
+        UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].transform.Translate(move);
     }
 
     public void GetMovement(InputAction.CallbackContext _context)
