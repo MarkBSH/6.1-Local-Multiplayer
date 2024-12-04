@@ -13,12 +13,6 @@ public class CosmeticsSpawner : MonoBehaviour
             if (m_Instance == null)
             {
                 m_Instance = FindObjectOfType<CosmeticsSpawner>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new();
-                    _obj.name = typeof(CosmeticsSpawner).Name;
-                    m_Instance = _obj.AddComponent<CosmeticsSpawner>();
-                }
             }
             return m_Instance;
         }

@@ -21,7 +21,6 @@ public class SpawnPlayers : MonoBehaviour
         // If this is the main island scene, reset player minigame choices and display scores
         if (isMainIsland)
         {
-            MinigameChooser.Instance.PlayerSetup();
             ScoreManager.Instance.FindAndSetTexts();
         }
     }

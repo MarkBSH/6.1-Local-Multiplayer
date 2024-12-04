@@ -13,12 +13,6 @@ public class FireworkMinigameManager : MonoBehaviour
             if (m_Instance == null)
             {
                 m_Instance = FindObjectOfType<FireworkMinigameManager>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new();
-                    _obj.name = typeof(FireworkMinigameManager).Name;
-                    m_Instance = _obj.AddComponent<FireworkMinigameManager>();
-                }
             }
             return m_Instance;
         }

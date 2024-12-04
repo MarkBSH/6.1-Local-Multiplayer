@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnderWaterHealth : MonoBehaviour
 {
+    public int playerNum; // The player number of the cannon
     public float health = 3; // Initial health of the cannon
     public GameObject img1; // Reference to the first health image
     public GameObject img2; // Reference to the second health image

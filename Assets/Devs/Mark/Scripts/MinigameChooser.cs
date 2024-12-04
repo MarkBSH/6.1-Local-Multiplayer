@@ -14,11 +14,6 @@ public class MinigameChooser : MonoBehaviour
             if (m_Instance == null)
             {
                 m_Instance = FindObjectOfType<MinigameChooser>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new GameObject(nameof(MinigameChooser));
-                    m_Instance = _obj.AddComponent<MinigameChooser>();
-                }
             }
             return m_Instance;
         }
@@ -40,9 +35,10 @@ public class MinigameChooser : MonoBehaviour
         countdownText.SetActive(false);
         choosingPanel = GameObject.Find("ChoosingPanel");
         choosingPanel.SetActive(false);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void PlayerSetup()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Set up players for the minigame selection
         games = FindObjectsOfType<PlayerChooseGame>();

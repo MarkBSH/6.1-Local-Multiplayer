@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UnderWaterMovement : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class UnderWaterMovement : MonoBehaviour
 
     void Update()
     {
-
-        Vector3 move = new Vector3(-movement.x, movement.y, 0) * speed * Time.deltaTime;
-        UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].transform.Translate(move);
+        //if (SceneManager.GetActiveScene().name == "UnderWaterMinigame")
+        //{
+        Vector3 move = new Vector3(movement.x, -movement.y, 0) * speed * Time.deltaTime;
+        UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].GetComponent<Rigidbody>().velocity = move * 200;
+        //}
     }
 
     public void GetMovement(InputAction.CallbackContext _context)

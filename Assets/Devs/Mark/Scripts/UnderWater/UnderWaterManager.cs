@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +13,7 @@ public class UnderWaterManager : MonoBehaviour
         {
             if (m_Instance == null)
             {
-                GameObject _obj = new();
-                _obj.name = typeof(UnderWaterManager).Name;
-                m_Instance = _obj.AddComponent<UnderWaterManager>();
+                m_Instance = FindObjectOfType<UnderWaterManager>();
             }
             return m_Instance;
         }
@@ -32,6 +31,10 @@ public class UnderWaterManager : MonoBehaviour
         {
             Destroy(underWaterHealths[i].gameObject);
             underWaterHealths.RemoveAt(i);
+        }
+        for (int i = 0; i < underWaterHealths.Count; i++)
+        {
+            underWaterHealths[i].playerNum = i;
         }
         OnHealthChanged();
     }
@@ -53,7 +56,7 @@ public class UnderWaterManager : MonoBehaviour
         if (aliveCount == 1 && hasWon == false)
         {
             // Award points to the winner
-            switch (winner.GetComponent<MainMenuPlayer>().playerNum)
+            switch (winner.GetComponent<UnderWaterHealth>().playerNum)
             {
                 case 0:
                     ScoreManager.Instance.AddPoints("P1");
@@ -71,20 +74,37 @@ public class UnderWaterManager : MonoBehaviour
 
             hasWon = true;
 
-            StartCoroutine(EndMoment());
+            StartCoroutine(EndMoment(winner.transform.position));
         }
     }
 
-    IEnumerator EndMoment()
+    public IEnumerator EndMoment(Vector3 camPos)
     {
+        StopAllMovement();
+
         yield return new WaitForSeconds(1);
 
         // Zoom camera to the winner
-        CamZoomToWinner.Instance.StartZooming(winner);
+        CamZoomToWinner.Instance.StartZoomingUnderWater(camPos);
 
         yield return new WaitForSeconds(4);
 
         // Load the main scene
         SceneManager.LoadScene("MarkMain");
+    }
+
+    public void StopAllMovement()
+    {
+        UnderWaterTunnelMoving[] tunnelMovements = FindObjectsOfType<UnderWaterTunnelMoving>();
+        for (int i = 0; i < tunnelMovements.Length; i++)
+        {
+            tunnelMovements[i].speed = 0;
+        }
+
+        UnderWaterMovement[] submarineMovements = FindObjectsOfType<UnderWaterMovement>();
+        for (int i = 0; i < submarineMovements.Length; i++)
+        {
+            submarineMovements[i].speed = 0;
+        }
     }
 }

@@ -12,9 +12,7 @@ public class CanonGamemanager : MonoBehaviour
         {
             if (m_Instance == null)
             {
-                GameObject _obj = new();
-                _obj.name = typeof(CanonGamemanager).Name;
-                m_Instance = _obj.AddComponent<CanonGamemanager>();
+                m_Instance = FindObjectOfType<CanonGamemanager>();
             }
             return m_Instance;
         }
@@ -31,6 +29,10 @@ public class CanonGamemanager : MonoBehaviour
         {
             Destroy(canonHealths[i].gameObject);
             canonHealths.RemoveAt(i);
+        }
+        for (int i = 0; i < canonHealths.Count; i++)
+        {
+            canonHealths[i].playerNum = i;
         }
     }
 
@@ -51,7 +53,7 @@ public class CanonGamemanager : MonoBehaviour
         if (aliveCount == 1 && hasWon == false)
         {
             // Award points to the winner
-            switch (winner.GetComponent<MainMenuPlayer>().playerNum)
+            switch (winner.GetComponent<CanonHealth>().playerNum)
             {
                 case 0:
                     ScoreManager.Instance.AddPoints("P1");

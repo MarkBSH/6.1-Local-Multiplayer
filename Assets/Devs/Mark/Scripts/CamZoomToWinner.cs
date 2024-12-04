@@ -13,11 +13,6 @@ public class CamZoomToWinner : MonoBehaviour
             if (m_Instance == null)
             {
                 m_Instance = FindObjectOfType<CamZoomToWinner>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new GameObject(nameof(CamZoomToWinner));
-                    m_Instance = _obj.AddComponent<CamZoomToWinner>();
-                }
             }
             return m_Instance;
         }
@@ -25,7 +20,9 @@ public class CamZoomToWinner : MonoBehaviour
 
     [SerializeField] Vector3 startLocation; // Starting position of the camera
     GameObject winningPlayer; // The winning player's game object
+    Vector3 winningPos; // The winning player's game object
     bool canZoom = false; // Flag to control zoom action
+    bool canZoomUnderWater = false; // Flag to control zoom action
     bool canTurn = false; // Flag to control rotation
     float timer = 0; // Timer for interpolation
 
@@ -51,6 +48,26 @@ public class CamZoomToWinner : MonoBehaviour
             }
         }
 
+        if (canZoomUnderWater)
+        {
+            // Smoothly move the camera towards the winner
+            transform.position = Vector3.Slerp(
+                startLocation,
+                new Vector3(
+                    winningPos.x,
+                    winningPos.y,
+                    winningPos.z - 5
+                ),
+                timer
+            );
+            timer += Time.deltaTime / 2;
+            if (timer > 1)
+            {
+                timer = 0;
+                canZoomUnderWater = false;
+            }
+        }
+
         if (canTurn)
         {
             // Smoothly rotate the camera
@@ -70,6 +87,13 @@ public class CamZoomToWinner : MonoBehaviour
     {
         canZoom = true;
         winningPlayer = player;
+        startLocation = transform.position;
+    }
+
+    public void StartZoomingUnderWater(Vector3 camPos)
+    {
+        canZoomUnderWater = true;
+        winningPos = camPos;
         startLocation = transform.position;
     }
 
