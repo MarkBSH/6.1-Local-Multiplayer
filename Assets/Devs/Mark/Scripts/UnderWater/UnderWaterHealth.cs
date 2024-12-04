@@ -9,6 +9,9 @@ public class UnderWaterHealth : MonoBehaviour
     public GameObject img2; // Reference to the second health image
     public GameObject img3; // Reference to the third health image
 
+    private bool isInvulnerable = false; // Flag to check invulnerability
+    public Animator animator; // Reference to the Animator component
+
     void Start()
     {
         UpdateHealthImages(); // Initialize the health UI
@@ -19,9 +22,9 @@ public class UnderWaterHealth : MonoBehaviour
         // No update logic needed
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("CanonHit"))
+        if (other.CompareTag("UnderWaterHit") && !isInvulnerable)
         {
             health -= 1; // Decrease health when hit by a bullet
             UpdateHealthImages(); // Refresh the health UI
@@ -31,14 +34,26 @@ public class UnderWaterHealth : MonoBehaviour
             {
                 gameObject.SetActive(false); // Deactivate the cannon when health is depleted
             }
+            else
+            {
+                StartCoroutine(InvulnerabilityCoroutine()); // Start invulnerability period
+            }
         }
+    }
+
+    IEnumerator InvulnerabilityCoroutine()
+    {
+        isInvulnerable = true; // Set invulnerability flag
+        animator.SetTrigger("Flash"); // Play hit animation
+        yield return new WaitForSeconds(1f); // Wait for 1 second
+        isInvulnerable = false; // Reset invulnerability flag
     }
 
     void UpdateHealthImages()
     {
         // Update the health images based on the current health
-        //img1.SetActive(health >= 1);
-        //img2.SetActive(health >= 2);
-        //img3.SetActive(health >= 3);
+        img1.SetActive(health >= 1);
+        img2.SetActive(health >= 2);
+        img3.SetActive(health >= 3);
     }
 }
