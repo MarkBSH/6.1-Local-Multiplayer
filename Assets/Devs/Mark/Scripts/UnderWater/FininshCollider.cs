@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class FininshCollider : MonoBehaviour
 {
+    bool hasCollided = false;
+
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && hasCollided == false)
         {
+            hasCollided = true;
             StartCoroutine(UnderWaterManager.Instance.EndMoment(new Vector3(0, 0, -5)));
             UnderWaterHealth[] underWaterHealth = FindObjectsOfType<UnderWaterHealth>();
             for (int i = 0; i < underWaterHealth.Length; i++)

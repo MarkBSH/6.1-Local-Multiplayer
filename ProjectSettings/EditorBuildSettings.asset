@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Devs/Mark/Scenes/StartScene.unity
+    guid: d9d499bf10135004f966b12e237c2a0c
+  - enabled: 1
     path: Assets/Devs/Mark/Scenes/StartMenu.unity
     guid: b7305cbf52c5b864f95c7cc772ac2c4c
   - enabled: 1
@@ -27,9 +30,12 @@ EditorBuildSettings:
     path: Assets/Devs/Mathijn/minigames/coin pickup/coinminigame.unity
     guid: 38402ee7b5a562d4ebca118975304377
   - enabled: 1
+    path: Assets/Devs/Mark/Scenes/CanonMinigame.unity
+    guid: 9f150a65e522bae4ca8664147cb51d96
+  - enabled: 1
     path: Assets/Devs/Mark/Scenes/UnderWaterMinigame.unity
     guid: eb97711afb6afed4d953ddd2473c1ac2
   - enabled: 1
-    path: Assets/Devs/Mark/Scenes/CanonMinigame.unity
-    guid: 9f150a65e522bae4ca8664147cb51d96
+    path: Assets/Devs/Mark/Scenes/EndScene.unity
+    guid: d42b5162f12bd7546935ebfaf43e2c6b
   m_configObjects: {}

@@ -36,6 +36,8 @@ public class ScoreManager : MonoBehaviour
     int P4Score = 0;
     TextMeshProUGUI P4Text;
 
+    bool hasEnded = false;
+
     void Start()
     {
         // Prevent this object from being destroyed and subscribe to scene loaded event
@@ -46,9 +48,25 @@ public class ScoreManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Update score texts when the main scene is loaded
-        if (scene.name == "MarkMain")
+        if (scene.name == "MarkMain" && !hasEnded)
         {
             FindAndSetTexts();
+            if (P1Score >= 5)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
+            if (P2Score >= 5)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
+            if (P3Score >= 5)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
+            if (P4Score >= 5)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
         }
     }
 
