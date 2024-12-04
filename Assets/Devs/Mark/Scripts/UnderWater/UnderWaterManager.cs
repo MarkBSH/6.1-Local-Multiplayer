@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UnderWaterGameManager : MonoBehaviour
+public class UnderWaterManager : MonoBehaviour
 {
-    private static UnderWaterGameManager m_Instance;
-    public static UnderWaterGameManager Instance
+    private static UnderWaterManager m_Instance;
+    public static UnderWaterManager Instance
     {
         get
         {
             if (m_Instance == null)
             {
-                m_Instance = FindObjectOfType<UnderWaterGameManager>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new();
-                    _obj.name = typeof(UnderWaterGameManager).Name;
-                    m_Instance = _obj.AddComponent<UnderWaterGameManager>();
-                }
+                GameObject _obj = new();
+                _obj.name = typeof(UnderWaterManager).Name;
+                m_Instance = _obj.AddComponent<UnderWaterManager>();
             }
             return m_Instance;
         }
@@ -34,9 +30,10 @@ public class UnderWaterGameManager : MonoBehaviour
         int activePlayerCount = CosmeticsSpawner.Instance.spawningPlayers;
         for (int i = underWaterHealths.Count - 1; i >= activePlayerCount; i--)
         {
-            //Destroy(underWaterHealths[i].gameObject);
-            //underWaterHealths.RemoveAt(i);
+            Destroy(underWaterHealths[i].gameObject);
+            underWaterHealths.RemoveAt(i);
         }
+        OnHealthChanged();
     }
 
     public void OnHealthChanged()

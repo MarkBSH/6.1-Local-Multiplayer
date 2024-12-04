@@ -13,12 +13,8 @@ public class MainMenu : MonoBehaviour
         {
             if (m_Instance == null)
             {
-                m_Instance = FindObjectOfType<MainMenu>();
-                if (m_Instance == null)
-                {
-                    GameObject _obj = new GameObject(nameof(MainMenu));
-                    m_Instance = _obj.AddComponent<MainMenu>();
-                }
+                GameObject _obj = new GameObject(nameof(MainMenu));
+                m_Instance = _obj.AddComponent<MainMenu>();
             }
             return m_Instance;
         }

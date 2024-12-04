@@ -28,7 +28,7 @@ public class UnderWaterHealth : MonoBehaviour
         {
             health -= 1; // Decrease health when hit by a bullet
             UpdateHealthImages(); // Refresh the health UI
-            UnderWaterGameManager.Instance.OnHealthChanged(); // Notify the game manager
+            UnderWaterManager.Instance.OnHealthChanged(); // Notify the game manager
 
             if (health <= 0)
             {
