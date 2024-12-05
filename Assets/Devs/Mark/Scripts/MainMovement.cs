@@ -17,8 +17,7 @@ public class MainMovement : MonoBehaviour
     float jumpCooldown = 0.2f; // Cooldown between jumps
     float jumpTimer = 0; // Timer for jump cooldown
     [SerializeField] GameObject jumpAudio; // Jump sound effect
-    [SerializeField] GameObject moveAudio; // Movement sound effect
-    GameObject moveSound; // Movement sound effect object
+    [SerializeField] AudioSource moveAudio; // Movement sound effect
 
     void Start()
     {
@@ -54,6 +53,22 @@ public class MainMovement : MonoBehaviour
             transform.forward = new Vector3(m_RB.velocity.x, 0, m_RB.velocity.z);
         }
 
+        // Play or stop movement audio based on moveDir
+        if (moveDir != Vector2.zero)
+        {
+            if (!moveAudio.isPlaying)
+            {
+                moveAudio.Play();
+            }
+        }
+        else
+        {
+            if (moveAudio.isPlaying)
+            {
+                moveAudio.Stop();
+            }
+        }
+
         // Increment jump timer
         if (jumpTimer <= jumpCooldown)
         {
@@ -78,7 +93,6 @@ public class MainMovement : MonoBehaviour
         moveDir = _context.ReadValue<Vector2>();
         if (_context.performed)
         {
-            moveSound = Instantiate(moveAudio, transform.position, Quaternion.identity);
             playerAnimator.SetBool("Move", true);
             if (skinAnimator != null)
             {
@@ -87,7 +101,6 @@ public class MainMovement : MonoBehaviour
         }
         if (_context.canceled)
         {
-            Destroy(moveSound);
             playerAnimator.SetBool("Move", false);
             if (skinAnimator != null)
             {
