@@ -13,7 +13,7 @@ public class UnderWaterMovement : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "UnderWaterMinigame")
         {
-            Vector3 move = new Vector3(movement.x, -movement.y, 0) * speed * Time.deltaTime;
+            Vector3 move = new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
             Debug.Log(move * 200);
             UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].GetComponent<Rigidbody>().velocity = move * 200;
         }
