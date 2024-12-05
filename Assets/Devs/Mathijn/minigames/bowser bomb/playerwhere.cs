@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerwhere : MonoBehaviour
@@ -36,7 +37,7 @@ public class playerwhere : MonoBehaviour
     }
     public void pressbutton()
     {
-        animators[whatbutton].SetTrigger("press");
+        
         if (whatbutton != 0)
         {
             animators[whatbutton - 1].SetTrigger("pushdown");
@@ -60,11 +61,15 @@ public class playerwhere : MonoBehaviour
         Instantiate(boembeffect);
         resetbutton();
 
+        players[playernum].SetActive(false);
+        
+
     }
     public void noboemb()
     {
         Debug.Log("no boemb");
         resetbutton();
+        randomplayer();
     }
     public void randomplayer()
     {
