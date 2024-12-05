@@ -1942,6 +1942,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2146670330117364909, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146670330117364909, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426600812921174517, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426600812921174517, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426600812921174517, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5154353997417629255, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_LocalPosition.x
       value: 195.09001
@@ -1981,6 +2001,18 @@ PrefabInstance:
     - target: {fileID: 5154353997417629255, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378969854874169993, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378969854874169993, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378969854874169993, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.3
       objectReference: {fileID: 0}
     - target: {fileID: 8873948076199657566, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Name
@@ -3409,10 +3441,6 @@ PrefabInstance:
     - target: {fileID: 4332875890627860554, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_Name
       value: island
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
-      propertyPath: Loop
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: MaxDistance
