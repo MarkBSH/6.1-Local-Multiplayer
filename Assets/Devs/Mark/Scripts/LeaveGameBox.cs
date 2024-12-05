@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class LeaveGameBox : MonoBehaviour
 {
+    [SerializeField] GameObject leaveGameAudio; // Leave game sound effect
     // Called when another collider enters this trigger
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Instantiate(leaveGameAudio, transform.position, Quaternion.identity);
             StartCoroutine(QuitGame());
         }
     }

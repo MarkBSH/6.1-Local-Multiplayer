@@ -108,6 +108,8 @@ MonoBehaviour:
   movementMax: 10
   jumpForce: 250
   canJump: 0
+  jumpAudio: {fileID: 8376438997223632539, guid: 638b101594738c74bae23138639c5b99, type: 3}
+  moveAudio: {fileID: 2491592228378093495, guid: 329113edc9eb52245a0f90f54b9d2b98, type: 3}
 --- !u!114 &9213652186116492127
 MonoBehaviour:
   m_ObjectHideFlags: 0

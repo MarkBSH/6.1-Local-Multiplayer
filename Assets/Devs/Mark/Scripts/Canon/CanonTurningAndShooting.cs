@@ -9,6 +9,7 @@ public class CanonTurningAndShooting : MonoBehaviour
 
     [SerializeField] GameObject bulletPrefab; // Prefab for the bullet
     [SerializeField] Transform bulletSpawnPoint; // Point where the bullet will be instantiated
+    [SerializeField] GameObject canonAudio;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class CanonTurningAndShooting : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         Instantiate(bulletPrefab, bulletSpawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+        Instantiate(canonAudio, transform.position, transform.rotation);
 
         yield return new WaitForSeconds(0.5f);
         turnSpeed = baseTurnSpeed;

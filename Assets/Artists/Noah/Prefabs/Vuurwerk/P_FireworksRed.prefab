@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1180351682257141526}
   - component: {fileID: 6248191993906024177}
   - component: {fileID: 491766976490505398}
+  - component: {fileID: -8697181910548651244}
   m_Layer: 0
   m_Name: P_FireworksRed
   m_TagString: Untagged
@@ -111,3 +112,16 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-8697181910548651244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960746842317200689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ca52c1124034b488fadab5a7c5b9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireworkAudio: {fileID: 6255762402951237530, guid: e1b920749327f0d46b4e487ded3c4572, type: 3}

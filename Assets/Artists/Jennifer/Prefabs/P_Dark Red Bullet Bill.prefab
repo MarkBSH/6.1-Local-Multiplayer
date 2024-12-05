@@ -118,6 +118,7 @@ MonoBehaviour:
   speed: 20
   explosionEffect: {fileID: 8731898186795368236, guid: ae9b77afc404f704eb36e780f97a15de, type: 3}
   explosionHit: {fileID: 5199959312441975847, guid: d969cd63f7ccd9841bbb0e195ef9ee99, type: 3}
+  explosionAudio: {fileID: 1479899569798956528, guid: cef925ba9610d484cab7dc97d334ac21, type: 3}
 --- !u!64 &4279952641683364623
 MeshCollider:
   m_ObjectHideFlags: 0
