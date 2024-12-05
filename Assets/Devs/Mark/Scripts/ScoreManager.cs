@@ -27,23 +27,24 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Player scores and associated UI texts
-    int P1Score = 0;
+    int P1Score = 1;
     TextMeshProUGUI P1Text;
-    int P2Score = 0;
+    int P2Score = 2;
     TextMeshProUGUI P2Text;
-    int P3Score = 0;
+    int P3Score = 2;
     TextMeshProUGUI P3Text;
-    int P4Score = 0;
+    int P4Score = 3;
     TextMeshProUGUI P4Text;
 
-    List<int> scores = new List<int>();
+    public List<int> scores = new();
 
     bool hasEnded = false;
 
-    void Start()
+    void Awake()
     {
         // Prevent this object from being destroyed and subscribe to scene loaded event
         DontDestroyOnLoad(this);
+        UpdateScoresList();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -56,10 +57,7 @@ public class ScoreManager : MonoBehaviour
             if (P1Score >= 5 || P2Score >= 5 || P3Score >= 5 || P4Score >= 5)
             {
                 hasEnded = true;
-                scores.Add(P1Score);
-                scores.Add(P2Score);
-                scores.Add(P3Score);
-                scores.Add(P4Score);
+                UpdateScoresList();
                 SceneManager.LoadScene("EndScene");
             }
         }
@@ -83,6 +81,16 @@ public class ScoreManager : MonoBehaviour
                 P4Score++;
                 break;
         }
+        UpdateScoresList();
+    }
+
+    private void UpdateScoresList()
+    {
+        scores.Clear();
+        scores.Add(P1Score);
+        scores.Add(P2Score);
+        scores.Add(P3Score);
+        scores.Add(P4Score);
     }
 
     // Find and set the score texts on the UI
