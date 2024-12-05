@@ -1539,6 +1539,7 @@ MonoBehaviour:
   baseTurnSpeed: 150
   bulletPrefab: {fileID: 4330725042342466006, guid: 1a04ce189f98acb4b923f35cb301d9d2, type: 3}
   bulletSpawnPoint: {fileID: 1262649983}
+  canonAudio: {fileID: 4580674471186514851, guid: 948aab3060e59dc4780e2d2da258ee53, type: 3}
 --- !u!114 &482157581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,6 +1555,7 @@ MonoBehaviour:
   baseTurnSpeed: 150
   bulletPrefab: {fileID: 5761881859992114381, guid: 45f8c186b1976fb4698a0389ed412441, type: 3}
   bulletSpawnPoint: {fileID: 517449410}
+  canonAudio: {fileID: 4580674471186514851, guid: 948aab3060e59dc4780e2d2da258ee53, type: 3}
 --- !u!114 &482157582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,6 +1571,7 @@ MonoBehaviour:
   baseTurnSpeed: 150
   bulletPrefab: {fileID: 5362729839795847257, guid: c582d77d212e19f48b398b01a1e7f117, type: 3}
   bulletSpawnPoint: {fileID: 854769669}
+  canonAudio: {fileID: 4580674471186514851, guid: 948aab3060e59dc4780e2d2da258ee53, type: 3}
 --- !u!114 &482157583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,6 +1587,7 @@ MonoBehaviour:
   baseTurnSpeed: 150
   bulletPrefab: {fileID: 6443952569811731109, guid: 0e6e9416737cb2445be723a18b972f93, type: 3}
   bulletSpawnPoint: {fileID: 1342658397}
+  canonAudio: {fileID: 4580674471186514851, guid: 948aab3060e59dc4780e2d2da258ee53, type: 3}
 --- !u!4 &482157584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4352735288449197516, guid: 6e6981440edf2eb4f982f544abbe76b4, type: 3}
@@ -2930,7 +2934,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4348ef85cb812f0479c06b941a0d171f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.181
   m_Pitch: 1
   Loop: 1
   Mute: 0

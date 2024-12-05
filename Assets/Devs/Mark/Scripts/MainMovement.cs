@@ -16,6 +16,9 @@ public class MainMovement : MonoBehaviour
     public bool canJump; // Indicates if the player can jump
     float jumpCooldown = 0.2f; // Cooldown between jumps
     float jumpTimer = 0; // Timer for jump cooldown
+    [SerializeField] GameObject jumpAudio; // Jump sound effect
+    [SerializeField] GameObject moveAudio; // Movement sound effect
+    GameObject moveSound; // Movement sound effect object
 
     void Start()
     {
@@ -75,6 +78,7 @@ public class MainMovement : MonoBehaviour
         moveDir = _context.ReadValue<Vector2>();
         if (_context.performed)
         {
+            moveSound = Instantiate(moveAudio, transform.position, Quaternion.identity);
             playerAnimator.SetBool("Move", true);
             if (skinAnimator != null)
             {
@@ -83,6 +87,7 @@ public class MainMovement : MonoBehaviour
         }
         if (_context.canceled)
         {
+            Destroy(moveSound);
             playerAnimator.SetBool("Move", false);
             if (skinAnimator != null)
             {
@@ -103,6 +108,7 @@ public class MainMovement : MonoBehaviour
             {
                 skinAnimator.SetTrigger("Jump");
             }
+            Instantiate(jumpAudio, transform.position, Quaternion.identity);
         }
     }
 

@@ -4523,7 +4523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: MaxDistance
-      value: 157.9197
+      value: 990.099
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: rolloffMode
@@ -4725,6 +4725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165906082206276214, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: leaveGameAudio
+      value: 
+      objectReference: {fileID: 6239958296263759604, guid: eaba594e99122a24a9d2eebc34dd48e9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
