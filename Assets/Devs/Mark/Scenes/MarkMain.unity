@@ -2470,12 +2470,8 @@ PrefabInstance:
       value: bowserbomb
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: MaxDistance
-      value: 70
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: rolloffMode
@@ -2540,10 +2536,6 @@ PrefabInstance:
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[6].value
       value: 0.008102417
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope
