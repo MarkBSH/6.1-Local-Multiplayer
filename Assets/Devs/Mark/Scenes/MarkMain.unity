@@ -2415,11 +2415,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 729807861408728461, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.1
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 729807861408728461, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3993187667688424176, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2474,8 +2474,16 @@ PrefabInstance:
       value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: MaxDistance
-      value: 89
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
+      propertyPath: MinDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: rolloffMode
@@ -3891,8 +3899,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144201636342555088, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: Priority
@@ -3900,11 +3916,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: MaxDistance
-      value: 80
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
+      propertyPath: MinDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8175898437879089570, guid: cba1c060643c4cd4697dd834ba1cb765, type: 3}
       propertyPath: rolloffMode
@@ -4499,7 +4519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: MaxDistance
@@ -4563,7 +4583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope
@@ -4647,7 +4667,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1846315949054755886, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846315949054755886, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: MaxDistance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846315949054755886, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: MinDistance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1846315949054755886, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: rolloffMode
