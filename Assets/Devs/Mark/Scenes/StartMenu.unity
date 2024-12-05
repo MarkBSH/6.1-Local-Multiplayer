@@ -8511,6 +8511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bc3a68ebf15684eb8f695a8a956157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scores: 
 --- !u!4 &551500334
 Transform:
   m_ObjectHideFlags: 0
@@ -19468,7 +19469,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: MaxDistance
-      value: 30
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      propertyPath: MinDistance
+      value: 990.099
       objectReference: {fileID: 0}
     - target: {fileID: 222314848914573565, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
