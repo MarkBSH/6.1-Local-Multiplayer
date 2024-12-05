@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  explosionEffect: {fileID: 8731898186795368236, guid: 0155a6166aa150a499211c555af1861b, type: 3}
+  explosionEffect: {fileID: 8731898186795368236, guid: ae9b77afc404f704eb36e780f97a15de, type: 3}
   explosionHit: {fileID: 5199959312441975847, guid: d969cd63f7ccd9841bbb0e195ef9ee99, type: 3}
 --- !u!64 &6747493051661266707
 MeshCollider:

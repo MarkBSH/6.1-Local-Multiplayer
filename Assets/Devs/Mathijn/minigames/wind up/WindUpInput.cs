@@ -23,7 +23,6 @@ public class WindUpInput : MonoBehaviour
 
         if (windup == null && sceneName == "windup")
         {
-            Debug.Log("fortnitem oneys on a ilands");
             GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
             if (gameController != null)
             {

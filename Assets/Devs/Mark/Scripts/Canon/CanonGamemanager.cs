@@ -36,7 +36,7 @@ public class CanonGamemanager : MonoBehaviour
         }
     }
 
-    public void OnHealthChanged()
+    public void Update()
     {
         int aliveCount = 0;
 
@@ -78,6 +78,8 @@ public class CanonGamemanager : MonoBehaviour
     IEnumerator EndMoment()
     {
         yield return new WaitForSeconds(1);
+
+        Debug.Log(winner);
 
         // Zoom camera to the winner
         CamZoomToWinner.Instance.StartZooming(winner);

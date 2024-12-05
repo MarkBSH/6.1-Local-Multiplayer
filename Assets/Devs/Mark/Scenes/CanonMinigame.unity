@@ -1537,7 +1537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTurnSpeed: 150
-  shotCooldown: 2
   bulletPrefab: {fileID: 4330725042342466006, guid: 1a04ce189f98acb4b923f35cb301d9d2, type: 3}
   bulletSpawnPoint: {fileID: 1262649983}
 --- !u!114 &482157581
@@ -1553,7 +1552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTurnSpeed: 150
-  shotCooldown: 2
   bulletPrefab: {fileID: 5761881859992114381, guid: 45f8c186b1976fb4698a0389ed412441, type: 3}
   bulletSpawnPoint: {fileID: 517449410}
 --- !u!114 &482157582
@@ -1569,7 +1567,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTurnSpeed: 150
-  shotCooldown: 2
   bulletPrefab: {fileID: 5362729839795847257, guid: c582d77d212e19f48b398b01a1e7f117, type: 3}
   bulletSpawnPoint: {fileID: 854769669}
 --- !u!114 &482157583
@@ -1585,7 +1582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTurnSpeed: 150
-  shotCooldown: 2
   bulletPrefab: {fileID: 6443952569811731109, guid: 0e6e9416737cb2445be723a18b972f93, type: 3}
   bulletSpawnPoint: {fileID: 1342658397}
 --- !u!4 &482157584 stripped
@@ -1605,6 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cdeed63c4cad3498bb3c3383bbbf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 0
   health: 3
   img1: {fileID: 1889631110}
   img2: {fileID: 1684732545}
@@ -1621,6 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cdeed63c4cad3498bb3c3383bbbf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 0
   health: 3
   img1: {fileID: 1011896816}
   img2: {fileID: 1776646942}
@@ -1642,6 +1640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cdeed63c4cad3498bb3c3383bbbf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 0
   health: 3
   img1: {fileID: 448147268}
   img2: {fileID: 1481216728}
@@ -3979,6 +3978,7 @@ GameObject:
   - component: {fileID: 1210224954}
   - component: {fileID: 1210224953}
   - component: {fileID: 1210224952}
+  - component: {fileID: 1210224957}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -4104,6 +4104,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &1210224957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210224951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a579ca906c3f86478e450d1000fedb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1234355203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7191,6 +7204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cdeed63c4cad3498bb3c3383bbbf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 0
   health: 3
   img1: {fileID: 1964021128}
   img2: {fileID: 1184747816}

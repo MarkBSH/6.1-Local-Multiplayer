@@ -27,13 +27,13 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Player scores and associated UI texts
-    int P1Score = 1;
+    int P1Score = 0;
     TextMeshProUGUI P1Text;
-    int P2Score = 2;
+    int P2Score = 0;
     TextMeshProUGUI P2Text;
-    int P3Score = 2;
+    int P3Score = 0;
     TextMeshProUGUI P3Text;
-    int P4Score = 3;
+    int P4Score = 0;
     TextMeshProUGUI P4Text;
 
     public List<int> scores = new();

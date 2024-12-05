@@ -35,9 +35,9 @@ public class CamZoomToWinner : MonoBehaviour
                 startLocation,
                 new Vector3(
                     winningPlayer.transform.position.x,
-                    winningPlayer.transform.position.y + 5,
-                    winningPlayer.transform.position.z - 5
-                ),
+                    winningPlayer.transform.position.y + 10,
+                    winningPlayer.transform.position.z - 10
+                    ),
                 timer
             );
             timer += Time.deltaTime / 2;
