@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 0.75
+  moveSpeed: 1
   Animator: {fileID: 1168363789219562878}
 --- !u!114 &1780189325254136287
 MonoBehaviour:

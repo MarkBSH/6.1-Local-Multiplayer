@@ -14,6 +14,7 @@ public class playerwhere : MonoBehaviour
     public GameObject[] players;
     public GameObject boembeffect;
     public TMP_Text[] texts;
+    private List<GameObject> playerList = new List<GameObject>();
     public void Start()
     {
         randomplayer();
@@ -61,8 +62,22 @@ public class playerwhere : MonoBehaviour
         Instantiate(boembeffect);
         resetbutton();
 
-        players[playernum].SetActive(false);
-        
+        GameObject playerToRemove = players[playernum];
+        playerList.Remove(playerToRemove);  // Remove the player from the list
+        playerToRemove.SetActive(false);    // Deactivate the player in the scene
+
+        // Update the players array to reflect the removal
+        players = playerList.ToArray();
+
+        if (players.Length > 0)
+        {
+            randomplayer();
+        }
+        else
+        {
+            Debug.Log("No players left!");
+        }
+
 
     }
     public void noboemb()
