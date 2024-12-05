@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class FininshCollider : MonoBehaviour
 {
-    bool hasCollided = false;
+    public bool hasCollided = false;
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && hasCollided == false)
         {

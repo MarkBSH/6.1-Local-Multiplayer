@@ -11,11 +11,12 @@ public class UnderWaterMovement : MonoBehaviour
 
     void Update()
     {
-        //if (SceneManager.GetActiveScene().name == "UnderWaterMinigame")
-        //{
-        Vector3 move = new Vector3(movement.x, -movement.y, 0) * speed * Time.deltaTime;
-        UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].GetComponent<Rigidbody>().velocity = move * 200;
-        //}
+        if (SceneManager.GetActiveScene().name == "UnderWaterMinigame")
+        {
+            Vector3 move = new Vector3(movement.x, -movement.y, 0) * speed * Time.deltaTime;
+            Debug.Log(move * 200);
+            UnderWaterManager.Instance.submarines[GetComponent<MainMenuPlayer>().playerNum].GetComponent<Rigidbody>().velocity = move * 200;
+        }
     }
 
     public void GetMovement(InputAction.CallbackContext _context)
