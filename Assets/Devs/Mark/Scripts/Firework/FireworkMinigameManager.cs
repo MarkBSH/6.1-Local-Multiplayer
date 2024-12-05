@@ -24,13 +24,12 @@ public class FireworkMinigameManager : MonoBehaviour
     [SerializeField] GameObject[] fireworkPlacements;
     int chosenWinner;
     bool hasEnded = false;
-    GameObject canvas;
+    [SerializeField] GameObject canvas;
 
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         players = GameObject.FindGameObjectsWithTag("Player");
-        canvas = GameObject.Find("canvas");
     }
 
     // Resets variables when a new scene is loaded

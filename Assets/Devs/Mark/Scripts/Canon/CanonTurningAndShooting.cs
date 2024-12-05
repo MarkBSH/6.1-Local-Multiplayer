@@ -6,8 +6,7 @@ public class CanonTurningAndShooting : MonoBehaviour
 {
     [SerializeField] float baseTurnSpeed; // Base rotation speed
     float turnSpeed; // Current rotation speed
-    [SerializeField] float shotCooldown; // Cooldown between shots
-    float shotTimer; // Timer to track cooldown
+
     [SerializeField] GameObject bulletPrefab; // Prefab for the bullet
     [SerializeField] Transform bulletSpawnPoint; // Point where the bullet will be instantiated
 
@@ -18,11 +17,7 @@ public class CanonTurningAndShooting : MonoBehaviour
 
     void Update()
     {
-        // Update the shot timer
-        if (shotTimer <= shotCooldown)
-        {
-            shotTimer += Time.deltaTime;
-        }
+
 
         // Rotate the cannon
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
@@ -31,16 +26,14 @@ public class CanonTurningAndShooting : MonoBehaviour
     // Coroutine to handle shooting
     public IEnumerator Shoot()
     {
-        if (shotTimer > shotCooldown)
-        {
-            turnSpeed = 0;
-            yield return new WaitForSeconds(0.5f);
 
-            Instantiate(bulletPrefab, bulletSpawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+        turnSpeed = 0;
+        yield return new WaitForSeconds(0.5f);
 
-            yield return new WaitForSeconds(0.5f);
-            turnSpeed = baseTurnSpeed;
-            shotTimer = 0;
-        }
+        Instantiate(bulletPrefab, bulletSpawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+
+        yield return new WaitForSeconds(0.5f);
+        turnSpeed = baseTurnSpeed;
+
     }
 }

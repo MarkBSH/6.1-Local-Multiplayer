@@ -26,7 +26,7 @@ public class CanonHealth : MonoBehaviour
         {
             health -= 1; // Decrease health when hit by a bullet
             UpdateHealthImages(); // Refresh the health UI
-            CanonGamemanager.Instance.OnHealthChanged(); // Notify the game manager
+
 
             if (health <= 0)
             {

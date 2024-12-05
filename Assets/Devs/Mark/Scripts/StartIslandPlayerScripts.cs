@@ -24,9 +24,9 @@ public class StartIslandPlayerScripts : MonoBehaviour
             playerInput[i].SwitchCurrentActionMap("Main");
             players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
             players[i].GetComponent<MainMovement>().enabled = true;
-            players[i].GetComponent<MainMovement>().movementSpeed = 24;
+            players[i].GetComponent<MainMovement>().movementSpeed = 44;
             players[i].GetComponent<MainMovement>().jumpForce = 650;
-            players[i].GetComponent<MainMovement>().movementMax = 10;
+            players[i].GetComponent<MainMovement>().movementMax = 20;
             players[i].GetComponent<MainMenuPlayer>().enabled = false;
             players[i].GetComponent<WindUpInput>().enabled = false;
         }
@@ -45,9 +45,9 @@ public class StartIslandPlayerScripts : MonoBehaviour
             playerInput[i].SwitchCurrentActionMap("Main");
             players[i].GetComponent<PlayerChooseGame>().chosenGame = "";
             players[i].GetComponent<MainMovement>().enabled = true;
-            players[i].GetComponent<MainMovement>().movementSpeed = 24;
+            players[i].GetComponent<MainMovement>().movementSpeed = 44;
             players[i].GetComponent<MainMovement>().jumpForce = 650;
-            players[i].GetComponent<MainMovement>().movementMax = 10;
+            players[i].GetComponent<MainMovement>().movementMax = 20;
             players[i].GetComponent<MainMenuPlayer>().enabled = false;
             players[i].GetComponent<WindUpInput>().enabled = false;
         }

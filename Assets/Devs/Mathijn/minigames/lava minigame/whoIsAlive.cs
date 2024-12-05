@@ -15,7 +15,7 @@ public class whoIsAlive : MonoBehaviour
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        playersAlive = new GameObject[players.Length];  
+        playersAlive = new GameObject[players.Length];
         numberOfAlivePlayers = players.Length;
 
         for (int i = 0; i < players.Length; i++)
@@ -24,7 +24,7 @@ public class whoIsAlive : MonoBehaviour
             players[i].GetComponent<MainMovement>().movementSpeed = 18;
             players[i].GetComponent<MainMovement>().jumpForce = 400;
             players[i].GetComponent<MainMovement>().movementMax = 6;
-            players[i].GetComponent<PlayerHitScript>().hitEvent.AddListener(() => player(players[i])); 
+            players[i].GetComponent<PlayerHitScript>().hitEvent.AddListener(() => player(players[i]));
 
             playersAlive[i] = players[i];
         }
@@ -58,6 +58,7 @@ public class whoIsAlive : MonoBehaviour
                     break;
             }
             SceneManager.LoadScene("MarkMain");
+            CosmeticsSpawner.Instance.ActivatePlayers();
         }
     }
 
@@ -68,7 +69,7 @@ public class whoIsAlive : MonoBehaviour
         {
             if (player == players[i])
             {
-                texts[i].text = numberOfAlivePlayers + " players left";  
+                texts[i].text = numberOfAlivePlayers + " players left";
             }
         }
     }

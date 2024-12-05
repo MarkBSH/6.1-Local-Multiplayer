@@ -860,6 +860,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eea6b6c70b72804cb1ba75593671d4d, type: 3}
+--- !u!1 &479964508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1947871435005734616, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+  m_PrefabInstance: {fileID: 6038232237963565627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &479964511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479964508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6149898b770b6df478daf3bcccd9b56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animSpeedControl: 1
 --- !u!1001 &509126294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3441,14 +3459,6 @@ PrefabInstance:
     - target: {fileID: 4332875890627860554, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
       propertyPath: m_Name
       value: island
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
-      propertyPath: MaxDistance
-      value: 95
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142424090662840086, guid: 25909788ebcdbcf4ab889e6dda7de9e7, type: 3}
-      propertyPath: MinDistance
-      value: 89
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7420,7 +7430,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1947871435005734616, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 479964511}
   m_SourcePrefab: {fileID: 100100000, guid: 7e6d16bfe428258479fba5f4adbf76f8, type: 3}
 --- !u!1001 &6205790460262592942
 PrefabInstance:
