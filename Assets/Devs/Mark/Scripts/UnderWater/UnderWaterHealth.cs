@@ -12,6 +12,7 @@ public class UnderWaterHealth : MonoBehaviour
 
     private bool isInvulnerable = false; // Flag to check invulnerability
     public Animator animator; // Reference to the Animator component
+    [SerializeField] GameObject hitAudio; // Hit sound effect
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class UnderWaterHealth : MonoBehaviour
 
     IEnumerator InvulnerabilityCoroutine()
     {
+        Instantiate(hitAudio, transform.position, transform.rotation); // Play hit sound effect
         isInvulnerable = true; // Set invulnerability flag
         animator.SetTrigger("Flash"); // Play hit animation
         yield return new WaitForSeconds(1f); // Wait for 1 second

@@ -79,8 +79,6 @@ public class CanonGamemanager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        Debug.Log(winner);
-
         // Zoom camera to the winner
         CamZoomToWinner.Instance.StartZooming(winner);
 

@@ -88,7 +88,7 @@ public class MainMenu : MonoBehaviour
             mainMenuPlayer[i] = mainMenuPlayerTemp[mainMenuPlayerTemp.Length - 1 - i];
         }
 
-        mainMenuPlayer[totalPlayers].transform.position = new Vector3(0, -100, 0);
+        mainMenuPlayer[totalPlayers].transform.position = new Vector3(-1000, 100, -500);
         mainMenuPlayer[totalPlayers].playerNum = totalPlayers;
 
         activeCanv[totalPlayers].SetActive(true);
