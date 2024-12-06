@@ -18,14 +18,13 @@ public class playerwhere : MonoBehaviour
     public GameObject boembeffect;
     public TMP_Text[] texts;
     public AudioSource audioSource;
-    // To keep track of players still in the game
     private List<GameObject> activePlayers;
 
     public void Start()
     {
         randomplayer();
         StartCoroutine(Countdown4.StartCountdown2());
-        activePlayers = new List<GameObject>(players);  // Initialize the list with all players
+        activePlayers = new List<GameObject>(players); 
     }
 
     public void changebutton(int whatbuttonfunc, int player)
@@ -121,7 +120,6 @@ public class playerwhere : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         players2 = GameObject.FindGameObjectsWithTag("Player");
 
-        // Initialize the active players list
         activePlayers = new List<GameObject>(players);
 
         playernum = Random.Range(0, players.Length);
